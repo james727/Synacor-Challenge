@@ -64,12 +64,6 @@ class synacor_machine( object ):
         else:
             return self.registers[ val ]
 
-    def getnumfromaddr( self, addr ):
-        if addr < 32768:
-            return self.memory[ addr ]
-        else:
-            return self.registers[ addr ]
-
     def setmem( self, address_mem_index, val ):
         address = self.memory[ address_mem_index ]
         if address < 32768:
@@ -198,7 +192,6 @@ class synacor_machine( object ):
         char = chr( target )
         sys.stdout.write( "%s" % char )
         sys.stdout.flush()
-        time.sleep(.005)
         return address + 2
 
     def handle_20( self, address ):
