@@ -34,8 +34,6 @@ class synacor_machine( object ):
         current_address = 0
         while True:
             current_instruction = self.memory[ current_address ]
-            #if current_instruction != 19:
-            #    print current_address, current_instruction
             if current_instruction == 0: break
             current_address = self.handlers[ current_instruction ]( current_address )
 
@@ -58,11 +56,6 @@ class synacor_machine( object ):
         filenums = [ 9, 32768, 32769, 4, 19, 32768 ]
         for index, num in enumerate( filenums ):
             self.memory[ index ] = num
-
-    def test( self ):
-        self.registers[ 32769 ] = 100
-        self.load_test_file()
-        self.run()
 
     def getnum( self, mem_address ):
         val = self.memory[ mem_address ]
