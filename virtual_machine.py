@@ -2,13 +2,14 @@ from struct import unpack
 import sys, time
 
 FILENAME = "challenge.bin"
+ID_FUNCTIONS = set([ 1531, 2125, 1528 ] )
 
 class synacor_machine( object ):
     def __init__( self ):
         self.memory = [ 0 ] * ( 2 ** 15 )
         self.registers = { i: 0 for i in range( 32768, 32776 ) }
         self.stack = []
-        self.handlers = {   1: self.handle_1,
+        self.handlers = {   1:  self.handle_1,
                             2:  self.handle_2,
                             3:  self.handle_3,
                             4:  self.handle_4,
@@ -29,6 +30,7 @@ class synacor_machine( object ):
                             19: self.handle_19,
                             20: self.handle_20,
                             21: self.handle_21 }
+        self.show_function_calls = False
 
     def run( self ):
         current_address = 0
@@ -71,20 +73,17 @@ class synacor_machine( object ):
         else:
             self.registers[ address ] = val
 
-    def handle_1( self, address ):
-        # set
+    def handle_1( self, address ): # set
         val = self.getnum( address + 2 )
         self.setmem( address + 1, val )
         return address + 3
 
-    def handle_2( self, address ):
-        # push
+    def handle_2( self, address ): # push
         val = self.getnum( address + 1 )
         self.stack.append( val )
         return address + 2
 
-    def handle_3( self, address ):
-        # pop
+    def handle_3( self, address ): # pop
         if len( self.stack ) == 0:
             raise Exception( "Empty Stack" )
         else:
@@ -92,110 +91,95 @@ class synacor_machine( object ):
             self.setmem( address + 1, val )
             return address + 2
 
-    def handle_4( self, address ):
-        # eq
+    def handle_4( self, address ): # eq
         b, c = self.getnum( address + 2 ), self.getnum( address + 3 )
         self.setmem( address + 1, 1 if b == c else 0 )
         return address + 4
 
-    def handle_5( self, address ):
-        # gt
+    def handle_5( self, address ): # gt
         register = self.memory[ address + 1 ]
         b, c = self.getnum( address + 2 ), self.getnum( address + 3 )
         self.setmem( address + 1, 1 if b > c else 0 )
         return address + 4
 
-    def handle_6( self, address ):
-        # jmp
+    def handle_6( self, address ): # jmp
         a = self.getnum( address + 1 )
         return a
 
-    def handle_7( self, address ):
-        # jt
+    def handle_7( self, address ): # jt
         a, b = self.getnum( address + 1 ), self.getnum( address + 2 )
         if a != 0:
             return b
         return address + 3
 
-    def handle_8( self, address ):
-        # jf
+    def handle_8( self, address ): # jf
         a, b = self.getnum( address + 1 ), self.getnum( address + 2 )
         if a == 0:
             return b
         return address + 3
 
-    def handle_9( self, address ):
-        # add
+    def handle_9( self, address ): # add
         b, c = self.getnum( address + 2 ), self.getnum( address + 3 )
         self.setmem( address + 1, ( b + c ) % 32768 )
         return address + 4
 
-    def handle_10( self, address ):
-        # mult
+    def handle_10( self, address ): # mult
         b, c = self.getnum( address + 2 ), self.getnum( address + 3 )
         self.setmem( address + 1, ( b * c ) % 32768 )
         return address + 4
 
-    def handle_11( self, address ):
-        # mod
+    def handle_11( self, address ): # mod
         b, c = self.getnum( address + 2 ), self.getnum( address + 3 )
         self.setmem( address + 1, ( b % c ) % 32768 )
         return address + 4
 
-    def handle_12( self, address ):
-        # and
+    def handle_12( self, address ): # and
         b, c = self.getnum( address + 2 ), self.getnum( address + 3 )
         self.setmem( address + 1, ( b & c ) % 32768 )
         return address + 4
 
-    def handle_13( self, address ):
-        # or
+    def handle_13( self, address ): # or
         b, c = self.getnum( address + 2 ), self.getnum( address + 3 )
         self.setmem( address + 1, ( b | c ) % 32768 )
         return address + 4
 
-    def handle_14( self, address ):
-        # not
+    def handle_14( self, address ): # not
         b = self.getnum( address + 2 )
         self.setmem( address + 1, ( ~b ) & ( 2 ** 15 - 1 ) )
         return address + 3
 
-    def handle_15( self, address ):
-        # rmem
+    def handle_15( self, address ): # rmem
         addr = self.memory[ address + 2 ]
         val = self.memory[ self.registers[ addr ] ] if addr >= 32768 else self.memory[ addr ]
         self.setmem( address + 1, val )
         return address + 3
 
-    def handle_16( self, address ):
-        # wmem
+    def handle_16( self, address ): # wmem
         target = self.getnum( address + 1 )
         num = self.getnum( address + 2 )
         self.memory[ target ] = num
         return address + 3
 
-    def handle_17( self, address ):
-        # call
+    def handle_17( self, address ): # call
+        if self.getnum( address + 1 ) not in ID_FUNCTIONS and self.show_function_calls:
+            print "Calling", self.getnum( address + 1 ), "from", address
         self.stack.append( address + 2 )
         func_addr = self.getnum( address + 1 )
         return func_addr
 
-    def handle_18( self, address ):
-        # ret
+    def handle_18( self, address ): # ret
         if len( self.stack ) == 0: return -1
         ret_addr = self.stack.pop( -1 )
         return ret_addr
 
-    def handle_19( self, address ):
-        # out
+    def handle_19( self, address ): # out
         target = self.getnum( address + 1 )
         char = chr( target )
         sys.stdout.write( "%s" % char )
         sys.stdout.flush()
         return address + 2
 
-    def handle_20( self, address ):
-        # in
+    def handle_20( self, address ): # in
         a = sys.stdin.read( 1 )
         num = ord( a )
         self.setmem( address + 1, num )

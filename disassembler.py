@@ -25,6 +25,8 @@ OP_CODES = { 0: ( "halt", 0 ),
             20: ( "in  ", 1 ),
             21: ( "noop", 0 ) }
 
+REGISTERS = { i: " reg%d"%(i - 32768) for i in range( 32768, 32768+8) }
+
 def disassemble( memory ):
     distxt = ""
     memloc = 0
@@ -37,7 +39,9 @@ def disassemble( memory ):
     return dis_dict, distxt
 
 def format_arg( arg ):
-    return "%5d" % arg
+    if arg not in REGISTERS:
+        return "%5d" % arg
+    return REGISTERS[ int( arg ) ]
 
 def dis_loc( memory, loc ):
     code = memory[ loc ]

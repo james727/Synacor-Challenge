@@ -1,5 +1,5 @@
-    0 noop 
-    1 noop 
+    0 noop
+    1 noop
     2 out  Welcome to the Synacor Challenge!
 Please record your progress by putting codes like
 this one into the challenge website: YniRsTWNQjmV
@@ -10,1943 +10,2003 @@ Executing self-test...
   320 jmp    347
   322 out  jmp fails
 
-  342 halt 
-  343 noop 
-  344 noop 
-  345 noop 
-  346 noop 
-  347 noop 
-  348 noop 
-  349 noop 
-  350 noop 
-  351 noop 
+  342 halt
+  343 noop
+  344 noop
+  345 noop
+  346 noop
+  347 noop
+  348 noop
+  349 noop
+  350 noop
+  351 noop
   352 jmp    358
   354 jmp    368
   356 jmp    397
   358 jmp    484
   360 jmp    424
   362 jmp    453
-  364 noop 
-  365 noop 
-  366 noop 
-  367 noop 
+  364 noop
+  365 noop
+  366 noop
+  367 noop
   368 out  jmp lands -2
 
-  394 halt 
-  395 noop 
-  396 noop 
+  394 halt
+  395 noop
+  396 noop
   397 out  jmp lands -1
 
-  423 halt 
-  424 noop 
-  425 noop 
+  423 halt
+  424 noop
+  425 noop
   426 out  jmp lands +1
 
-  452 halt 
-  453 noop 
-  454 noop 
-  455 noop 
-  456 noop 
+  452 halt
+  453 noop
+  454 noop
+  455 noop
+  456 noop
   457 out  jmp lands +2
 
-  483 halt 
+  483 halt
   484 jt       0  1074
   487 jf       1  1074
   490 jt       1   495
   493 jmp   1074
   495 jf       0   500
   498 jmp   1074
-  500 jt   32768  1093
-  503 jt   32769  1093
-  506 jt   32770  1093
-  509 jt   32771  1093
-  512 jt   32772  1093
-  515 jt   32773  1093
-  518 jt   32774  1093
-  521 jt   32775  1093
-  524 set  32768     1
-  527 jf   32768  1118
-  530 set  32768     0
-  533 jt   32768  1118
-  536 add  32768     1     1
-  540 jt   32768   564
+  500 jt    reg0  1093
+  503 jt    reg1  1093
+  506 jt    reg2  1093
+  509 jt    reg3  1093
+  512 jt    reg4  1093
+  515 jt    reg5  1093
+  518 jt    reg6  1093
+  521 jt    reg7  1093
+  524 set   reg0     1
+  527 jf    reg0  1118
+  530 set   reg0     0
+  533 jt    reg0  1118
+  536 add   reg0     1     1
+  540 jt    reg0   564
   543 out  no add op
 
-  563 halt 
-  564 eq   32769 32768     2
-  568 jt   32769   590
+  563 halt
+  564 eq    reg1  reg0     2
+  568 jt    reg1   590
   571 out  no eq op
 
-  589 halt 
-  590 push 32768
-  592 push 32769
-  594 pop  32768
-  596 pop  32769
-  598 eq   32770 32769     2
-  602 jf   32770  1158
-  605 eq   32770 32768     1
-  609 jf   32770  1158
-  612 gt   32770 32769 32768
-  616 jf   32770  1139
-  619 gt   32770 32768 32769
-  623 jt   32770  1139
-  626 gt   32770    42    42
-  630 jt   32770  1139
-  633 and  32768 28912 19626
-  637 eq   32769 32768 16544
-  641 jf   32769  1177
-  644 or   32769 28912 19626
-  648 eq   32768 32769 31994
-  652 jt   32768   684
+  589 halt
+  590 push  reg0
+  592 push  reg1
+  594 pop   reg0
+  596 pop   reg1
+  598 eq    reg2  reg1     2
+  602 jf    reg2  1158
+  605 eq    reg2  reg0     1
+  609 jf    reg2  1158
+  612 gt    reg2  reg1  reg0
+  616 jf    reg2  1139
+  619 gt    reg2  reg0  reg1
+  623 jt    reg2  1139
+  626 gt    reg2    42    42
+  630 jt    reg2  1139
+  633 and   reg0 28912 19626
+  637 eq    reg1  reg0 16544
+  641 jf    reg1  1177
+  644 or    reg1 28912 19626
+  648 eq    reg0  reg1 31994
+  652 jt    reg0   684
   655 out  no bitwise or
 
-  683 halt 
-  684 not  32768     0
-  687 eq   32769 32768 32767
-  691 jf   32769  1208
-  694 not  32768 21845
-  697 eq   32769 32768 10922
-  701 jf   32769  1208
+  683 halt
+  684 not   reg0     0
+  687 eq    reg1  reg0 32767
+  691 jf    reg1  1208
+  694 not   reg0 21845
+  697 eq    reg1  reg0 10922
+  701 jf    reg1  1208
   704 call  1285
   706 jmp   1289
-  708 pop  32768
-  710 eq   32769 32768   708
-  714 jt   32769  1289
-  717 eq   32769 32768   706
-  721 jf   32769  1289
-  724 set  32768  1287
-  727 call 32768
+  708 pop   reg0
+  710 eq    reg1  reg0   708
+  714 jt    reg1  1289
+  717 eq    reg1  reg0   706
+  721 jf    reg1  1289
+  724 set   reg0  1287
+  727 call  reg0
   729 jmp   1289
-  731 pop  32768
-  733 eq   32769 32768   731
-  737 jt   32769  1289
-  740 eq   32769 32768   729
-  744 jf   32769  1289
-  747 add  32768 32767 32767
-  751 eq   32769 32768 32766
-  755 jf   32769  1312
-  758 eq   32769 32766 32768
-  762 jf   32769  1312
-  765 add  32768 16384 16384
-  769 jt   32768  1312
-  772 add  32768 16384 16384
-  776 jt   32768  1312
-  779 mult 32768     6     9
-  783 eq   32769 32768    42
-  787 jt   32769  1381
-  790 eq   32769 32768    54
-  794 jf   32769  1414
-  797 mult 32768 12345 32123
-  801 eq   32769 32768    99
-  805 jf   32769  1312
-  808 mod  32768     6     3
-  812 eq   32769 32768     0
-  816 jf   32769  1437
-  819 mod  32768    70     6
-  823 eq   32769 32768     4
-  827 jf   32769  1437
-  830 mult 32768 32766    15
-  834 eq   32769 32768 32738
-  838 jf   32769  1312
+  731 pop   reg0
+  733 eq    reg1  reg0   731
+  737 jt    reg1  1289
+  740 eq    reg1  reg0   729
+  744 jf    reg1  1289
+  747 add   reg0 32767 32767
+  751 eq    reg1  reg0 32766
+  755 jf    reg1  1312
+  758 eq    reg1 32766  reg0
+  762 jf    reg1  1312
+  765 add   reg0 16384 16384
+  769 jt    reg0  1312
+  772 add   reg0 16384 16384
+  776 jt    reg0  1312
+  779 mult  reg0     6     9
+  783 eq    reg1  reg0    42
+  787 jt    reg1  1381
+  790 eq    reg1  reg0    54
+  794 jf    reg1  1414
+  797 mult  reg0 12345 32123
+  801 eq    reg1  reg0    99
+  805 jf    reg1  1312
+  808 mod   reg0     6     3
+  812 eq    reg1  reg0     0
+  816 jf    reg1  1437
+  819 mod   reg0    70     6
+  823 eq    reg1  reg0     4
+  827 jf    reg1  1437
+  830 mult  reg0 32766    15
+  834 eq    reg1  reg0 32738
+  838 jf    reg1  1312
   841 jmp    845
-  845 rmem 32768   843
-  848 eq   32769 32768 20000
-  852 jf   32769  1239
-  855 add  32770   843     1
-  859 rmem 32768 32770
-  862 eq   32769 32768 10000
-  866 jf   32769  1239
-  869 set  32768   843
-  872 wmem 32768 30000
-  875 rmem 32770 32768
-  878 eq   32769 32770 30000
-  882 jf   32769  1262
+  845 rmem  reg0   843
+  848 eq    reg1  reg0 20000
+  852 jf    reg1  1239
+  855 add   reg2   843     1
+  859 rmem  reg0  reg2
+  862 eq    reg1  reg0 10000
+  866 jf    reg1  1239
+  869 set   reg0   843
+  872 wmem  reg0 30000
+  875 rmem  reg2  reg0
+  878 eq    reg1  reg2 30000
+  882 jf    reg1  1262
   885 call  1723
-  887 rmem 32768  6068
-  890 eq   32769 32768    11
-  894 jf   32769  1239
-  897 add  32770  6068     1
-  901 rmem 32768 32770
-  904 eq   32769 32768   116
-  908 jf   32769  1239
-  911 wmem 32770    84
-  914 rmem 32768 32770
-  917 eq   32769 32768   116
-  921 jt   32769  1262
-  924 eq   32769 32768    84
-  928 jf   32769  1262
+  887 rmem  reg0  6068
+  890 eq    reg1  reg0    11
+  894 jf    reg1  1239
+  897 add   reg2  6068     1
+  901 rmem  reg0  reg2
+  904 eq    reg1  reg0   116
+  908 jf    reg1  1239
+  911 wmem  reg2    84
+  914 rmem  reg0  reg2
+  917 eq    reg1  reg0   116
+  921 jt    reg1  1262
+  924 eq    reg1  reg0    84
+  928 jf    reg1  1262
   931 wmem   937    21
   934 wmem   938     7
   937 jmp    941
   939 out    978
   941 out  wmem opwrite fail
 
-  977 halt 
-  978 add  32769    10  6080
-  982 add  32769 32769     1
-  986 rmem 32770  6116
-  989 add  32770 32770  6116
-  993 set  32768  6116
-  996 add  32768 32768     1
- 1000 gt   32771 32768 32770
- 1004 jt   32771  1023
- 1007 rmem 32772 32768
- 1010 wmem 32769 32772
- 1013 add  32768 32768     1
- 1017 add  32769 32769     1
+  977 halt
+  978 add   reg1    10  6080
+  982 add   reg1  reg1     1
+  986 rmem  reg2  6116
+  989 add   reg2  reg2  6116
+  993 set   reg0  6116
+  996 add   reg0  reg0     1
+ 1000 gt    reg3  reg0  reg2
+ 1004 jt    reg3  1023
+ 1007 rmem  reg4  reg0
+ 1010 wmem  reg1  reg4
+ 1013 add   reg0  reg0     1
+ 1017 add   reg1  reg1     1
  1021 jmp   1000
- 1023 rmem 32768  6080
- 1026 rmem 32769  6099
- 1029 add  32768 32768 32769
- 1033 add  32768 32768     1
- 1037 wmem  6080 32768
+ 1023 rmem  reg0  6080
+ 1026 rmem  reg1  6099
+ 1029 add   reg0  reg0  reg1
+ 1033 add   reg0  reg0     1
+ 1037 wmem  6080  reg0
  1040 wmem  6099    44
- 1043 set  32768  6080
+ 1043 set   reg0  6080
  1046 call  1518
- 1048 push 32768
- 1050 push 32769
- 1052 push 32770
- 1054 set  32768 26851
- 1057 set  32769  1531
- 1060 add  32770  2279   915
+ 1048 push  reg0
+ 1050 push  reg1
+ 1052 push  reg2
+ 1054 set   reg0 26851
+ 1057 set   reg1  1531
+ 1060 add   reg2  2279   915
  1064 call  1458
- 1066 pop  32770
- 1068 pop  32769
- 1070 pop  32768
+ 1066 pop   reg2
+ 1068 pop   reg1
+ 1070 pop   reg0
  1072 jmp   2734
  1074 out  no jt/jf
 
- 1092 halt 
+ 1092 halt
  1093 out  nonzero reg
 
- 1117 halt 
+ 1117 halt
  1118 out  no set op
 
- 1138 halt 
+ 1138 halt
  1139 out  no gt op
 
- 1157 halt 
+ 1157 halt
  1158 out  no stack
 
- 1176 halt 
+ 1176 halt
  1177 out  no bitwise and
 
- 1207 halt 
+ 1207 halt
  1208 out  no bitwise not
 
- 1238 halt 
+ 1238 halt
  1239 out  no rmem op
 
- 1261 halt 
+ 1261 halt
  1262 out  no wmem op
 
- 1284 halt 
+ 1284 halt
  1285 jmp    708
  1287 jmp    731
  1289 out  no call op
 
- 1311 halt 
+ 1311 halt
  1312 out  no modulo math during add or mult
 
- 1380 halt 
+ 1380 halt
  1381 out  not hitchhiking
 
- 1413 halt 
+ 1413 halt
  1414 out  no mult op
 
- 1436 halt 
+ 1436 halt
  1437 out  no mod op
 
- 1457 halt 
- 1458 push 32768
- 1460 push 32771
- 1462 push 32772
- 1464 push 32773
- 1466 push 32774
- 1468 set  32774 32768
- 1471 set  32773 32769
- 1474 rmem 32772 32768
- 1477 set  32769     0
- 1480 add  32771     1 32769
- 1484 gt   32768 32771 32772
- 1488 jt   32768  1507
- 1491 add  32771 32771 32774
- 1495 rmem 32768 32771
- 1498 call 32773
- 1500 add  32769 32769     1
- 1504 jt   32769  1480
- 1507 pop  32774
- 1509 pop  32773
- 1511 pop  32772
- 1513 pop  32771
- 1515 pop  32768
- 1517 ret  
- 1518 push 32769
- 1520 set  32769  1528
+ 1457 halt
+
+Do reg1 in a for loop
+ 1458 push  reg0              // Save registers
+ 1460 push  reg3
+ 1462 push  reg4
+ 1464 push  reg5
+ 1466 push  reg6
+ 1468 set   reg6  reg0
+ 1471 set   reg5  reg1
+ 1474 rmem  reg4  reg0
+ 1477 set   reg1     0
+ 1480 add   reg3     1  reg1  // While
+ 1484 gt    reg0  reg3  reg4  // reg3 > reg4
+ 1488 jt    reg0  1507
+ 1491 add   reg3  reg3  reg6
+ 1495 rmem  reg0  reg3
+ 1498 call  reg5
+ 1500 add   reg1  reg1     1
+ 1504 jt    reg1  1480
+ 1507 pop   reg6
+ 1509 pop   reg5
+ 1511 pop   reg4
+ 1513 pop   reg3
+ 1515 pop   reg0
+ 1517 ret
+
+Do print in for loop
+ 1518 push  reg1
+ 1520 set   reg1  1528
  1523 call  1458
- 1525 pop  32769
- 1527 ret  
- 1528 out  32768
- 1530 ret  
- 1531 push 32769
- 1533 set  32769 32770
- 1536 call  2125
- 1538 out  32768
- 1540 pop  32769
- 1542 ret  
- 1543 push 32769
- 1545 push 32771
- 1547 rmem 32771 32768
- 1550 jf   32771  1563
+ 1525 pop   reg1
+ 1527 ret
+
+Print from reg0
+ 1528 out   reg0
+ 1530 ret
+
+Print char from Memory
+ 1531 push  reg1         // Preserve reg1
+ 1533 set   reg1  reg2   // Reg2 = Reg1 = initial address
+ 1536 call  2125         // Fetch character in reg0
+ 1538 out   reg0         // Print character
+ 1540 pop   reg1         // Restore reg1
+ 1542 ret
+
+ 1543 push  reg1
+ 1545 push  reg3
+ 1547 rmem  reg3  reg0
+ 1550 jf    reg3  1563
  1553 call  1458
- 1555 jt   32769  1563
- 1558 set  32768 32770
+ 1555 jt    reg1  1563
+ 1558 set   reg0  reg2
  1561 jmp   1566
- 1563 set  32768 32767
- 1566 pop  32771
- 1568 pop  32769
- 1570 ret  
- 1571 push 32769
- 1573 push 32770
- 1575 set  32770 32769
- 1578 set  32769  1605
+ 1563 set   reg0 32767
+ 1566 pop   reg3
+ 1568 pop   reg1
+ 1570 ret
+
+
+ 1571 push  reg1
+ 1573 push  reg2
+ 1575 set   reg2  reg1
+ 1578 set   reg1  1605
  1581 call  1543
- 1583 pop  32770
- 1585 pop  32769
- 1587 ret  
- 1588 push 32769
- 1590 push 32770
- 1592 set  32770 32769
- 1595 set  32769  1648
+ 1583 pop   reg2
+ 1585 pop   reg1
+ 1587 ret
+
+
+ 1588 push  reg1
+ 1590 push  reg2
+ 1592 set   reg2  reg1
+ 1595 set   reg1  1648
  1598 call  1543
- 1600 pop  32770
- 1602 pop  32769
- 1604 ret  
- 1605 eq   32768 32768 32770
- 1609 jf   32768  1618
- 1612 set  32770 32769
- 1615 set  32769 32767
- 1618 ret  
- 1619 push 32771
- 1621 add  32771 32770     1
- 1625 add  32771 32771 32769
- 1629 rmem 32771 32771
- 1632 eq   32771 32768 32771
- 1636 jt   32771  1645
- 1639 set  32770 32769
- 1642 set  32769 32767
- 1645 pop  32771
- 1647 ret  
- 1648 push 32769
- 1650 set  32769 32770
+ 1600 pop   reg2
+ 1602 pop   reg1
+ 1604 ret
+
+
+ 1605 eq    reg0  reg0  reg2
+ 1609 jf    reg0  1618
+ 1612 set   reg2  reg1
+ 1615 set   reg1 32767
+ 1618 ret
+
+
+ 1619 push  reg3
+ 1621 add   reg3  reg2     1
+ 1625 add   reg3  reg3  reg1
+ 1629 rmem  reg3  reg3
+ 1632 eq    reg3  reg0  reg3
+ 1636 jt    reg3  1645
+ 1639 set   reg2  reg1
+ 1642 set   reg1 32767
+ 1645 pop   reg3
+ 1647 ret
+
+
+ 1648 push  reg1
+ 1650 set   reg1  reg2
  1653 call  1667
- 1655 pop  32769
- 1657 jf   32768  1666
- 1660 set  32770 32769
- 1663 set  32769 32767
- 1666 ret  
- 1667 push 32769
- 1669 push 32770
- 1671 push 32771
- 1673 push 32772
- 1675 rmem 32771 32768
- 1678 rmem 32772 32769
- 1681 eq   32770 32771 32772
- 1685 jf   32770  1711
- 1688 or   32770 32771 32772
- 1692 jf   32770  1706
- 1695 set  32770 32769
- 1698 set  32769  1619
+ 1655 pop   reg1
+ 1657 jf    reg0  1666
+ 1660 set   reg2  reg1
+ 1663 set   reg1 32767
+ 1666 ret
+
+
+ 1667 push  reg1
+ 1669 push  reg2
+ 1671 push  reg3
+ 1673 push  reg4
+ 1675 rmem  reg3  reg0
+ 1678 rmem  reg4  reg1
+ 1681 eq    reg2  reg3  reg4
+ 1685 jf    reg2  1711
+ 1688 or    reg2  reg3  reg4
+ 1692 jf    reg2  1706
+ 1695 set   reg2  reg1
+ 1698 set   reg1  1619
  1701 call  1458
- 1703 jf   32769  1711
- 1706 set  32768     1
+ 1703 jf    reg1  1711
+ 1706 set   reg0     1
  1709 jmp   1714
- 1711 set  32768     0
- 1714 pop  32772
- 1716 pop  32771
- 1718 pop  32770
- 1720 pop  32769
- 1722 ret  
- 1723 push 32768
- 1725 push 32769
- 1727 set  32769  6068
- 1730 rmem 32768 32769
- 1733 push 32769
- 1735 mult 32769 32769 32769
+ 1711 set   reg0     0
+ 1714 pop   reg4
+ 1716 pop   reg3
+ 1718 pop   reg2
+ 1720 pop   reg1
+ 1722 ret
+
+
+ 1723 push  reg0
+ 1725 push  reg1
+ 1727 set   reg1  6068
+ 1730 rmem  reg0  reg1
+ 1733 push  reg1
+ 1735 mult  reg1  reg1  reg1
  1739 call  2125
- 1741 set  32769 16724
+ 1741 set   reg1 16724
  1744 call  2125
- 1746 pop  32769
- 1748 wmem 32769 32768
- 1751 add  32769 32769     1
- 1755 eq   32768 30050 32769
- 1759 jf   32768  1730
- 1762 pop  32769
- 1764 pop  32768
- 1766 ret  
- 1767 push 32768
- 1769 push 32770
- 1771 push 32771
- 1773 push 32772
- 1775 push 32773
- 1777 add  32770 32769 32768
- 1781 set  32768 32769
- 1784 set  32773     0
- 1787 add  32768 32768     1
- 1791 gt   32771 32768 32770
- 1795 jt   32771  1816
- 1798 in   32772
- 1800 eq   32771 32772    10
- 1804 jt   32771  1816
- 1807 wmem 32768 32772
- 1810 add  32773 32773     1
+ 1746 pop   reg1
+ 1748 wmem  reg1  reg0
+ 1751 add   reg1  reg1     1
+ 1755 eq    reg0 30050  reg1
+ 1759 jf    reg0  1730
+ 1762 pop   reg1
+ 1764 pop   reg0
+ 1766 ret
+
+
+ 1767 push  reg0
+ 1769 push  reg2
+ 1771 push  reg3
+ 1773 push  reg4
+ 1775 push  reg5
+ 1777 add   reg2  reg1  reg0
+ 1781 set   reg0  reg1
+ 1784 set   reg5     0
+ 1787 add   reg0  reg0     1
+ 1791 gt    reg3  reg0  reg2
+ 1795 jt    reg3  1816
+ 1798 in    reg4
+ 1800 eq    reg3  reg4    10
+ 1804 jt    reg3  1816
+ 1807 wmem  reg0  reg4
+ 1810 add   reg5  reg5     1
  1814 jmp   1787
- 1816 wmem 32769 32773
- 1819 eq   32771 32772    10
- 1823 jt   32771  1830
- 1826 in   32772
+ 1816 wmem  reg1  reg5
+ 1819 eq    reg3  reg4    10
+ 1823 jt    reg3  1830
+ 1826 in    reg4
  1828 jmp   1819
- 1830 pop  32773
- 1832 pop  32772
- 1834 pop  32771
- 1836 pop  32770
- 1838 pop  32768
- 1840 ret  
- 1841 push 32771
- 1843 push 32772
- 1845 push 32773
- 1847 push 32774
- 1849 set  32774     1
- 1852 add  32772 32771 32774
- 1856 rmem 32772 32772
- 1859 add  32773  6125 32774
- 1863 wmem 32773 32772
- 1866 add  32774 32774     1
- 1870 rmem 32773  6125
- 1873 gt   32772 32774 32773
- 1877 jf   32772  1852
- 1880 set  32771     0
- 1883 set  32772     0
- 1886 rmem 32773  6125
- 1889 mod  32773 32772 32773
- 1893 add  32773 32773  6125
- 1897 add  32773 32773     1
- 1901 rmem 32774 32773
- 1904 mult 32774 32774  5249
- 1908 add  32774 32774 12345
- 1912 wmem 32773 32774
- 1915 push 32768
- 1917 push 32769
- 1919 set  32769 32774
+ 1830 pop   reg5
+ 1832 pop   reg4
+ 1834 pop   reg3
+ 1836 pop   reg2
+ 1838 pop   reg0
+ 1840 ret
+ 1841 push  reg3
+ 1843 push  reg4
+ 1845 push  reg5
+ 1847 push  reg6
+ 1849 set   reg6     1
+ 1852 add   reg4  reg3  reg6
+ 1856 rmem  reg4  reg4
+ 1859 add   reg5  6125  reg6
+ 1863 wmem  reg5  reg4
+ 1866 add   reg6  reg6     1
+ 1870 rmem  reg5  6125
+ 1873 gt    reg4  reg6  reg5
+ 1877 jf    reg4  1852
+ 1880 set   reg3     0
+ 1883 set   reg4     0
+ 1886 rmem  reg5  6125
+ 1889 mod   reg5  reg4  reg5
+ 1893 add   reg5  reg5  6125
+ 1897 add   reg5  reg5     1
+ 1901 rmem  reg6  reg5
+ 1904 mult  reg6  reg6  5249
+ 1908 add   reg6  reg6 12345
+ 1912 wmem  reg5  reg6
+ 1915 push  reg0
+ 1917 push  reg1
+ 1919 set   reg1  reg6
  1922 call  2125
- 1924 set  32774 32768
- 1927 pop  32769
- 1929 pop  32768
- 1931 rmem 32773 32769
- 1934 mod  32774 32774 32773
- 1938 add  32774 32774     1
- 1942 gt   32773 32774 32770
- 1946 jt   32773  1952
- 1949 set  32771     1
- 1952 add  32774 32774 32769
- 1956 rmem 32774 32774
- 1959 add  32772 32772     1
- 1963 add  32773 32772  6129
- 1967 wmem 32773 32774
- 1970 rmem 32773  6129
- 1973 eq   32773 32772 32773
- 1977 jf   32773  1886
- 1980 jf   32771  1880
- 1983 push 32768
- 1985 set  32768  6129
+ 1924 set   reg6  reg0
+ 1927 pop   reg1
+ 1929 pop   reg0
+ 1931 rmem  reg5  reg1
+ 1934 mod   reg6  reg6  reg5
+ 1938 add   reg6  reg6     1
+ 1942 gt    reg5  reg6  reg2
+ 1946 jt    reg5  1952
+ 1949 set   reg3     1
+ 1952 add   reg6  reg6  reg1
+ 1956 rmem  reg6  reg6
+ 1959 add   reg4  reg4     1
+ 1963 add   reg5  reg4  6129
+ 1967 wmem  reg5  reg6
+ 1970 rmem  reg5  6129
+ 1973 eq    reg5  reg4  reg5
+ 1977 jf    reg5  1886
+ 1980 jf    reg3  1880
+ 1983 push  reg0
+ 1985 set   reg0  6129
  1988 call  1518
- 1990 pop  32768
- 1992 pop  32774
- 1994 pop  32773
- 1996 pop  32772
- 1998 pop  32771
- 2000 ret  
- 2001 push 32768
- 2003 push 32769
- 2005 push 32770
- 2007 push 32771
- 2009 push 32772
- 2011 push 32773
- 2013 set  32770     1
- 2016 set  32773     0
- 2019 jf   32768  2092
- 2022 eq   32772 32770 10000
- 2026 set  32771 32768
- 2029 jt   32772  2040
- 2032 mult 32769 32770    10
- 2036 mod  32771 32768 32769
- 2040 set  32772     0
- 2043 mult 32770 32770 32767
- 2047 jf   32771  2060
- 2050 add  32772 32772     1
- 2054 add  32771 32771 32770
+ 1990 pop   reg0
+ 1992 pop   reg6
+ 1994 pop   reg5
+ 1996 pop   reg4
+ 1998 pop   reg3
+ 2000 ret
+
+
+ 2001 push  reg0
+ 2003 push  reg1
+ 2005 push  reg2
+ 2007 push  reg3
+ 2009 push  reg4
+ 2011 push  reg5
+ 2013 set   reg2     1
+ 2016 set   reg5     0
+ 2019 jf    reg0  2092
+ 2022 eq    reg4  reg2 10000
+ 2026 set   reg3  reg0
+ 2029 jt    reg4  2040
+ 2032 mult  reg1  reg2    10
+ 2036 mod   reg3  reg0  reg1
+ 2040 set   reg4     0
+ 2043 mult  reg2  reg2 32767
+ 2047 jf    reg3  2060
+ 2050 add   reg4  reg4     1
+ 2054 add   reg3  reg3  reg2
  2058 jmp   2047
- 2060 mult 32770 32770 32767
- 2064 mult 32771 32772 32770
- 2068 mult 32771 32771 32767
- 2072 add  32768 32768 32771
- 2076 add  32772 32772    48
- 2080 mult 32770 32770    10
- 2084 add  32773 32773     1
- 2088 push 32772
+ 2060 mult  reg2  reg2 32767
+ 2064 mult  reg3  reg4  reg2
+ 2068 mult  reg3  reg3 32767
+ 2072 add   reg0  reg0  reg3
+ 2076 add   reg4  reg4    48
+ 2080 mult  reg2  reg2    10
+ 2084 add   reg5  reg5     1
+ 2088 push  reg4
  2090 jmp   2019
- 2092 jt   32773  2099
+ 2092 jt    reg5  2099
  2095 out  0
  2097 jmp   2112
- 2099 jf   32773  2112
- 2102 pop  32768
- 2104 out  32768
- 2106 add  32773 32773 32767
+ 2099 jf    reg5  2112
+ 2102 pop   reg0
+ 2104 out   reg0
+ 2106 add   reg5  reg5 32767
  2110 jmp   2099
- 2112 pop  32773
- 2114 pop  32772
- 2116 pop  32771
- 2118 pop  32770
- 2120 pop  32769
- 2122 pop  32768
- 2124 ret  
- 2125 push 32769
- 2127 push 32770
- 2129 and  32770 32768 32769
- 2133 not  32770 32770
- 2136 or   32768 32768 32769
- 2140 and  32768 32768 32770
- 2144 pop  32770
- 2146 pop  32769
- 2148 ret  
- 2149 add  32768 32768 32769
- 2153 gt   32769 32769 32768
- 2157 ret  
- 2158 push 32770
- 2160 gt   32770 32769 32768
- 2164 mult 32769 32769 32767
- 2168 add  32768 32768 32769
- 2172 set  32769 32770
- 2175 pop  32770
- 2177 ret  
- 2178 jf   32768  2241
- 2181 jf   32769  2241
- 2184 push 32770
- 2186 push 32771
- 2188 gt   32770 32769 32768
- 2192 jt   32770  2204
- 2195 set  32770 32768
- 2198 set  32768 32769
- 2201 set  32769 32770
- 2204 set  32770 32768
- 2207 set  32768     0
- 2210 add  32768 32768 32769
- 2214 gt   32771 32769 32768
- 2218 jt   32771  2233
- 2221 add  32770 32770 32767
- 2225 jt   32770  2210
- 2228 set  32769     0
+ 2112 pop   reg5
+ 2114 pop   reg4
+ 2116 pop   reg3
+ 2118 pop   reg2
+ 2120 pop   reg1
+ 2122 pop   reg0
+ 2124 ret
+
+Decode character
+ 2125 push  reg1              // Save reg1, reg2
+ 2127 push  reg2
+ 2129 and   reg2  reg0  reg1
+ 2133 not   reg2  reg2
+ 2136 or    reg0  reg0  reg1
+ 2140 and   reg0  reg0  reg2
+ 2144 pop   reg2
+ 2146 pop   reg1
+ 2148 ret
+
+ 2149 add   reg0  reg0  reg1
+ 2153 gt    reg1  reg1  reg0
+ 2157 ret
+ 2158 push  reg2
+ 2160 gt    reg2  reg1  reg0
+ 2164 mult  reg1  reg1 32767
+ 2168 add   reg0  reg0  reg1
+ 2172 set   reg1  reg2
+ 2175 pop   reg2
+ 2177 ret
+ 2178 jf    reg0  2241
+ 2181 jf    reg1  2241
+ 2184 push  reg2
+ 2186 push  reg3
+ 2188 gt    reg2  reg1  reg0
+ 2192 jt    reg2  2204
+ 2195 set   reg2  reg0
+ 2198 set   reg0  reg1
+ 2201 set   reg1  reg2
+ 2204 set   reg2  reg0
+ 2207 set   reg0     0
+ 2210 add   reg0  reg0  reg1
+ 2214 gt    reg3  reg1  reg0
+ 2218 jt    reg3  2233
+ 2221 add   reg2  reg2 32767
+ 2225 jt    reg2  2210
+ 2228 set   reg1     0
  2231 jmp   2236
- 2233 set  32769     1
- 2236 pop  32771
- 2238 pop  32770
- 2240 ret  
- 2241 set  32768     0
- 2244 set  32769     0
- 2247 ret  
- 2248 push 32769
- 2250 push 32770
- 2252 jf   32769  2276
- 2255 add  32769 32769 32767
- 2259 and  32770 32768 16384
- 2263 mult 32768 32768     2
- 2267 jf   32770  2252
- 2270 or   32768 32768     1
+ 2233 set   reg1     1
+ 2236 pop   reg3
+ 2238 pop   reg2
+ 2240 ret
+ 2241 set   reg0     0
+ 2244 set   reg1     0
+ 2247 ret
+ 2248 push  reg1
+ 2250 push  reg2
+ 2252 jf    reg1  2276
+ 2255 add   reg1  reg1 32767
+ 2259 and   reg2  reg0 16384
+ 2263 mult  reg0  reg0     2
+ 2267 jf    reg2  2252
+ 2270 or    reg0  reg0     1
  2274 jmp   2252
- 2276 pop  32770
- 2278 pop  32769
- 2280 ret  
- 2281 push 32769
- 2283 gt   32769 32768    14
- 2287 jt   32769  2309
- 2290 set  32769 32768
- 2293 set  32768     1
- 2296 jf   32769  2312
- 2299 add  32769 32769 32767
- 2303 mult 32768 32768     2
+ 2276 pop   reg2
+ 2278 pop   reg1
+ 2280 ret
+ 2281 push  reg1
+ 2283 gt    reg1  reg0    14
+ 2287 jt    reg1  2309
+ 2290 set   reg1  reg0
+ 2293 set   reg0     1
+ 2296 jf    reg1  2312
+ 2299 add   reg1  reg1 32767
+ 2303 mult  reg0  reg0     2
  2307 jmp   2296
- 2309 set  32768 32767
- 2312 pop  32769
- 2314 ret  
+ 2309 set   reg0 32767
+ 2312 pop   reg1
+ 2314 ret
  2315 jmp   2734
- 2321 halt 
- 2326 halt 
- 2331 halt 
- 2336 halt 
- 2341 halt 
- 2346 halt 
- 2351 halt 
- 2356 halt 
- 2361 halt 
- 2366 halt 
- 2371 halt 
- 2376 halt 
- 2421 halt 
- 2451 halt 
- 2456 halt 
- 2461 halt 
- 2462 halt 
- 2472 halt 
- 2477 halt 
- 2482 halt 
- 2487 halt 
- 2492 halt 
- 2497 halt 
- 2502 halt 
- 2507 halt 
- 2512 halt 
- 2517 halt 
- 2522 halt 
- 2527 halt 
- 2532 halt 
- 2537 halt 
- 2542 halt 
- 2547 halt 
- 2552 halt 
- 2557 halt 
- 2652 halt 
- 2657 halt 
- 2662 halt 
- 2675 halt 
- 2715 halt 
- 2719 halt 
- 2727 halt 
- 2731 halt 
- 2733 halt 
- 2734 push 32768
- 2736 push 32769
- 2738 push 32770
- 2740 push 32771
- 2742 rmem 32769  2732
- 2745 rmem 32768  2733
- 2748 eq   32768 32768 32769
- 2752 jt   32768  2770
- 2755 rmem 32768  2732
- 2758 add  32768 32768     4
- 2762 rmem 32768 32768
- 2765 jf   32768  2770
- 2768 call 32768
- 2770 rmem 32769  2732
- 2773 rmem 32768  2733
- 2776 eq   32768 32768 32769
- 2780 jt   32768  2791
- 2783 set  32768 25974
- 2786 wmem 32768     0
+ 2321 halt
+ 2326 halt
+ 2331 halt
+ 2336 halt
+ 2341 halt
+ 2346 halt
+ 2351 halt
+ 2356 halt
+ 2361 halt
+ 2366 halt
+ 2371 halt
+ 2376 halt
+ 2421 halt
+ 2451 halt
+ 2456 halt
+ 2461 halt
+ 2462 halt
+ 2472 halt
+ 2477 halt
+ 2482 halt
+ 2487 halt
+ 2492 halt
+ 2497 halt
+ 2502 halt
+ 2507 halt
+ 2512 halt
+ 2517 halt
+ 2522 halt
+ 2527 halt
+ 2532 halt
+ 2537 halt
+ 2542 halt
+ 2547 halt
+ 2552 halt
+ 2557 halt
+ 2652 halt
+ 2657 halt
+ 2662 halt
+ 2675 halt
+ 2715 halt
+ 2719 halt
+ 2727 halt
+ 2731 halt
+ 2733 halt
+ 2734 push  reg0
+ 2736 push  reg1
+ 2738 push  reg2
+ 2740 push  reg3
+ 2742 rmem  reg1  2732
+ 2745 rmem  reg0  2733
+ 2748 eq    reg0  reg0  reg1
+ 2752 jt    reg0  2770
+ 2755 rmem  reg0  2732
+ 2758 add   reg0  reg0     4
+ 2762 rmem  reg0  reg0
+ 2765 jf    reg0  2770
+ 2768 call  reg0
+ 2770 rmem  reg1  2732
+ 2773 rmem  reg0  2733
+ 2776 eq    reg0  reg0  reg1
+ 2780 jt    reg0  2791
+ 2783 set   reg0 25974
+ 2786 wmem  reg0     0
  2789 call  2964
- 2791 wmem  2733 32769
- 2794 push 32768
- 2796 push 32769
- 2798 push 32770
- 2800 set  32768 27414
- 2803 set  32769  1531
- 2806 add  32770   895  2542
+ 2791 wmem  2733  reg1
+ 2794 push  reg0
+ 2796 push  reg1
+ 2798 push  reg2
+ 2800 set   reg0 27414
+ 2803 set   reg1  1531
+ 2806 add   reg2   895  2542
  2810 call  1458
- 2812 pop  32770
- 2814 pop  32769
- 2816 pop  32768
- 2818 set  32768    32
- 2821 set  32769 25974
+ 2812 pop   reg2
+ 2814 pop   reg1
+ 2816 pop   reg0
+ 2818 set   reg0    32
+ 2821 set   reg1 25974
  2824 call  1767
- 2826 out  
-
-
- 2830 set  32768 25974
- 2833 set  32769    32
+ 2826 out
+ 2830 set   reg0 25974
+ 2833 set   reg1    32
  2836 call  1571
- 2838 eq   32769 32768 32767
- 2842 jf   32769  2848
- 2845 rmem 32768 25974
- 2848 set  32770 32768
- 2851 rmem 32769 25974
- 2854 push 32769
- 2856 wmem 25974 32770
- 2859 set  32768 27398
- 2862 set  32769 25974
+ 2838 eq    reg1  reg0 32767
+ 2842 jf    reg1  2848
+ 2845 rmem  reg0 25974
+ 2848 set   reg2  reg0
+ 2851 rmem  reg1 25974
+ 2854 push  reg1
+ 2856 wmem 25974  reg2
+ 2859 set   reg0 27398
+ 2862 set   reg1 25974
  2865 call  1588
- 2867 pop  32769
- 2869 wmem 25974 32769
- 2872 eq   32769 32768 32767
- 2876 jf   32769  2885
- 2879 set  32768     0
- 2882 set  32770     0
- 2885 add  32769 27406     1
- 2889 add  32769 32769 32768
- 2893 rmem 32769 32769
- 2896 rmem 32771 25974
- 2899 eq   32771 32771 32770
- 2903 jt   32771  2944
- 2906 mult 32768 32770 32767
- 2910 rmem 32771 25974
- 2913 add  32771 32768 32771
- 2917 jf   32770  2924
- 2920 add  32771 32771 32767
- 2924 mod  32771 32771    32
- 2928 add  32768 25974 32770
- 2932 jf   32770  2939
- 2935 add  32768 32768     1
- 2939 wmem 32768 32771
+ 2867 pop   reg1
+ 2869 wmem 25974  reg1
+ 2872 eq    reg1  reg0 32767
+ 2876 jf    reg1  2885
+ 2879 set   reg0     0
+ 2882 set   reg2     0
+ 2885 add   reg1 27406     1
+ 2889 add   reg1  reg1  reg0
+ 2893 rmem  reg1  reg1
+ 2896 rmem  reg3 25974
+ 2899 eq    reg3  reg3  reg2
+ 2903 jt    reg3  2944
+ 2906 mult  reg0  reg2 32767
+ 2910 rmem  reg3 25974
+ 2913 add   reg3  reg0  reg3
+ 2917 jf    reg2  2924
+ 2920 add   reg3  reg3 32767
+ 2924 mod   reg3  reg3    32
+ 2928 add   reg0 25974  reg2
+ 2932 jf    reg2  2939
+ 2935 add   reg0  reg0     1
+ 2939 wmem  reg0  reg3
  2942 jmp   2950
- 2944 set  32768 25974
- 2947 wmem 32768     0
- 2950 call 32769
- 2952 jt   32769  2742
- 2955 pop  32771
- 2957 pop  32770
- 2959 pop  32769
- 2961 pop  32768
- 2963 ret  
- 2964 push 32768
- 2966 push 32769
- 2968 push 32770
- 2970 rmem 32769 32768
- 2973 jf   32769  3032
+ 2944 set   reg0 25974
+ 2947 wmem  reg0     0
+ 2950 call  reg1
+ 2952 jt    reg1  2742
+ 2955 pop   reg3
+ 2957 pop   reg2
+ 2959 pop   reg1
+ 2961 pop   reg0
+ 2963 ret
+
+FUNCTION
+ 2964 push  reg0  // save registers
+ 2966 push  reg1
+ 2968 push  reg2
+ 2970 rmem  reg1  reg0
+ 2973 jf    reg1  3032
  2976 call  5921
- 2978 jf   32768  3006
- 2981 push 32768
+ 2978 jf    reg0  3006
+ 2981 push  reg0
  2983 call  5990
- 2985 set  32769 32768
- 2988 pop  32768
- 2990 jf   32769  3006
- 2993 add  32769 32768     1
- 2997 rmem 32768 32769
- 3000 call  1518
- 3002 out  
+ 2985 set   reg1  reg0
+ 2988 pop   reg0
+ 2990 jf    reg1  3006
+ 2993 add   reg1  reg0     1
+ 2997 rmem  reg0  reg1
+ 3000 call  1518              // PRINT IN FOR LOOP
+ 3002 out
 
  3004 jmp   3238
- 3006 push 32768
- 3008 push 32769
- 3010 push 32770
- 3012 set  32768 27432
- 3015 set  32769  1531
- 3018 add  32770 22017   497
+ 3006 push  reg0
+ 3008 push  reg1
+ 3010 push  reg2
+ 3012 set   reg0 27432
+ 3015 set   reg1  1531
+ 3018 add   reg2 22017   497
  3022 call  1458
- 3024 pop  32770
- 3026 pop  32769
- 3028 pop  32768
+ 3024 pop   reg2
+ 3026 pop   reg1
+ 3028 pop   reg0
  3030 jmp   3238
- 3032 rmem 32768  2732
- 3035 push 32768
- 3037 out  == 
- 3043 add  32768 32768     0
- 3047 rmem 32768 32768
+ 3032 rmem  reg0  2732    // start print location
+ 3035 push  reg0
+ 3037 out  ==
+ 3043 add   reg0  reg0     0
+ 3047 rmem  reg0  reg0
  3050 call  1518
  3052 out   ==
 
- 3060 pop  32768
- 3062 push 32768
- 3064 add  32768 32768     1
- 3068 rmem 32768 32768
- 3071 rmem 32769 32768
- 3074 eq   32769 32769     2
- 3078 jf   32769  3104
- 3081 push 32768
- 3083 set  32768  2680
+ 3060 pop   reg0
+ 3062 push  reg0
+ 3064 add   reg0  reg0     1
+ 3068 rmem  reg0  reg0
+ 3071 rmem  reg1  reg0
+ 3074 eq    reg1  reg1     2
+ 3078 jf    reg1  3104
+ 3081 push  reg0
+ 3083 set   reg0  2680
  3086 call  5990
- 3088 set  32769 32768
- 3091 pop  32768
- 3093 add  32768 32768     1
- 3097 add  32768 32768 32769
- 3101 rmem 32768 32768
+ 3088 set   reg1  reg0
+ 3091 pop   reg0
+ 3093 add   reg0  reg0     1
+ 3097 add   reg0  reg0  reg1
+ 3101 rmem  reg0  reg0
  3104 call  1518
- 3106 out  
+ 3106 out
 
- 3108 pop  32768
- 3110 push 32768
+ 3108 pop   reg0
+ 3110 push  reg0
  3112 call  5823
- 3114 jf   32768  3146
- 3117 push 32768
- 3119 push 32769
- 3121 push 32770
- 3123 set  32768 27455
- 3126 set  32769  1531
- 3129 add  32770  2542  4850
+ 3114 jf    reg0  3146
+ 3117 push  reg0
+ 3119 push  reg1
+ 3121 push  reg2
+ 3123 set   reg0 27455
+ 3126 set   reg1  1531
+ 3129 add   reg2  2542  4850
  3133 call  1458
- 3135 pop  32770
- 3137 pop  32769
- 3139 pop  32768
- 3141 rmem 32770  2732
+ 3135 pop   reg2
+ 3137 pop   reg1
+ 3139 pop   reg0
+ 3141 rmem  reg2  2732
  3144 call  5876
- 3146 pop  32768
- 3148 push 32768
- 3150 add  32768 32768     2
- 3154 rmem 32768 32768
- 3157 rmem 32768 32768
- 3160 eq   32770 32768     1
- 3164 out  
-There 
- 3178 jt   32770  3189
+ 3146 pop   reg0
+ 3148 push  reg0
+ 3150 add   reg0  reg0     2
+ 3154 rmem  reg0  reg0
+ 3157 rmem  reg0  reg0
+ 3160 eq    reg2  reg0     1
+ 3164 out
+There
+ 3178 jt    reg2  3189
  3181 out  are
  3187 jmp   3193
- 3189 out  is 
+ 3189 out  is
  3195 call  2001
  3197 out   exit
- 3207 eq   32770 32768     1
- 3211 jt   32770  3216
+ 3207 eq    reg2  reg0     1
+ 3211 jt    reg2  3216
  3214 out  s:
 
- 3220 pop  32768
- 3222 push 32768
- 3224 add  32768 32768     2
- 3228 rmem 32768 32768
- 3231 set  32769  5814
+ 3220 pop   reg0
+ 3222 push  reg0
+ 3224 add   reg0  reg0     2
+ 3228 rmem  reg0  reg0
+ 3231 set   reg1  5814
  3234 call  1458
- 3236 pop  32768
- 3238 pop  32770
- 3240 pop  32769
- 3242 pop  32768
- 3244 ret  
- 3245 push 32768
- 3247 push 32769
- 3249 push 32770
- 3251 set  32769 32768
- 3254 rmem 32768  2732
- 3257 add  32768 32768     2
- 3261 rmem 32768 32768
+ 3236 pop   reg0
+ 3238 pop   reg2
+ 3240 pop   reg1
+ 3242 pop   reg0
+ 3244 ret
+
+Update location?
+ 3245 push  reg0
+ 3247 push  reg1
+ 3249 push  reg2
+ 3251 set   reg1  reg0
+ 3254 rmem  reg0  2732
+ 3257 add   reg0  reg0     2
+ 3261 rmem  reg0  reg0
  3264 call  1588
- 3266 eq   32770 32768 32767
- 3270 jt   32770  3302
- 3273 rmem 32770  2732
- 3276 add  32770 32770     3
- 3280 rmem 32770 32770
- 3283 add  32770 32770     1
- 3287 add  32770 32770 32768
- 3291 rmem 32770 32770
- 3294 wmem  2732 32770
+ 3266 eq    reg2  reg0 32767
+ 3270 jt    reg2  3302
+ 3273 rmem  reg2  2732
+ 3276 add   reg2  reg2     3
+ 3280 rmem  reg2  reg2
+ 3283 add   reg2  reg2     1
+ 3287 add   reg2  reg2  reg0
+ 3291 rmem  reg2  reg2
+ 3294 wmem  2732  reg2
  3297 wmem  2733     0
  3300 jmp   3326
- 3302 push 32768
- 3304 push 32769
- 3306 push 32770
- 3308 set  32768 27482
- 3311 set  32769  1531
- 3314 add  32770 12788  8310
+ 3302 push  reg0
+ 3304 push  reg1
+ 3306 push  reg2
+ 3308 set   reg0 27482
+ 3311 set   reg1  1531
+ 3314 add   reg2 12788  8310
  3318 call  1458
- 3320 pop  32770
- 3322 pop  32769
- 3324 pop  32768
- 3326 pop  32770
- 3328 pop  32769
- 3330 pop  32768
- 3332 ret  
- 3333 push 32768
- 3335 push 32768
- 3337 push 32769
- 3339 push 32770
- 3341 set  32768 27532
- 3344 set  32769  1531
- 3347 add  32770  2287 17533
+ 3320 pop   reg2
+ 3322 pop   reg1
+ 3324 pop   reg0
+ 3326 pop   reg2
+ 3328 pop   reg1
+ 3330 pop   reg0
+ 3332 ret
+ 3333 push  reg0
+ 3335 push  reg0
+ 3337 push  reg1
+ 3339 push  reg2
+ 3341 set   reg0 27532
+ 3344 set   reg1  1531
+ 3347 add   reg2  2287 17533
  3351 call  1458
- 3353 pop  32770
- 3355 pop  32769
- 3357 pop  32768
- 3359 pop  32768
- 3361 ret  
- 3362 push 32768
- 3364 push 32770
- 3366 push 32768
- 3368 push 32769
- 3370 push 32770
- 3372 set  32768 28037
- 3375 set  32769  1531
- 3378 add  32770  1244   284
+ 3353 pop   reg2
+ 3355 pop   reg1
+ 3357 pop   reg0
+ 3359 pop   reg0
+ 3361 ret
+
+Print inventory
+ 3362 push  reg0
+ 3364 push  reg2
+ 3366 push  reg0
+ 3368 push  reg1
+ 3370 push  reg2
+ 3372 set   reg0 28037
+ 3375 set   reg1  1531
+ 3378 add   reg2  1244   284
  3382 call  1458
- 3384 pop  32770
- 3386 pop  32769
- 3388 pop  32768
- 3390 set  32770     0
+ 3384 pop   reg2
+ 3386 pop   reg1
+ 3388 pop   reg0
+ 3390 set   reg2     0
  3393 call  5876
- 3395 pop  32770
- 3397 pop  32768
- 3399 ret  
- 3400 push 32768
- 3402 push 32769
- 3404 push 32770
+ 3395 pop   reg2
+ 3397 pop   reg0
+ 3399 ret
+
+ 3400 push  reg0
+ 3402 push  reg1
+ 3404 push  reg2
  3406 call  5921
- 3408 jf   32768  3457
- 3411 add  32769 32768     2
- 3415 rmem 32768 32769
- 3418 rmem 32770  2732
- 3421 eq   32770 32768 32770
- 3425 jf   32770  3457
- 3428 wmem 32769     0
- 3431 push 32768
- 3433 push 32769
- 3435 push 32770
- 3437 set  32768 28054
- 3440 set  32769  1531
- 3443 add  32770  1207 10665
+ 3408 jf    reg0  3457
+ 3411 add   reg1  reg0     2
+ 3415 rmem  reg0  reg1
+ 3418 rmem  reg2  2732
+ 3421 eq    reg2  reg0  reg2
+ 3425 jf    reg2  3457
+ 3428 wmem  reg1     0
+ 3431 push  reg0
+ 3433 push  reg1
+ 3435 push  reg2
+ 3437 set   reg0 28054
+ 3440 set   reg1  1531
+ 3443 add   reg2  1207 10665
  3447 call  1458
- 3449 pop  32770
- 3451 pop  32769
- 3453 pop  32768
+ 3449 pop   reg2
+ 3451 pop   reg1
+ 3453 pop   reg0
  3455 jmp   3481
- 3457 push 32768
- 3459 push 32769
- 3461 push 32770
- 3463 set  32768 28062
- 3466 set  32769  1531
- 3469 add  32770  3113  5311
+ 3457 push  reg0
+ 3459 push  reg1
+ 3461 push  reg2
+ 3463 set   reg0 28062
+ 3466 set   reg1  1531
+ 3469 add   reg2  3113  5311
  3473 call  1458
- 3475 pop  32770
- 3477 pop  32769
- 3479 pop  32768
- 3481 pop  32770
- 3483 pop  32769
- 3485 pop  32768
- 3487 ret  
- 3488 push 32768
- 3490 push 32769
+ 3475 pop   reg2
+ 3477 pop   reg1
+ 3479 pop   reg0
+ 3481 pop   reg2
+ 3483 pop   reg1
+ 3485 pop   reg0
+ 3487 ret
+ 3488 push  reg0
+ 3490 push  reg1
  3492 call  5921
- 3494 jf   32768  3539
- 3497 add  32769 32768     2
- 3501 rmem 32768 32769
- 3504 jt   32768  3539
- 3507 rmem 32768  2732
- 3510 wmem 32769 32768
- 3513 push 32768
- 3515 push 32769
- 3517 push 32770
- 3519 set  32768 28090
- 3522 set  32769  1531
- 3525 add  32770 17290 10863
+ 3494 jf    reg0  3539
+ 3497 add   reg1  reg0     2
+ 3501 rmem  reg0  reg1
+ 3504 jt    reg0  3539
+ 3507 rmem  reg0  2732
+ 3510 wmem  reg1  reg0
+ 3513 push  reg0
+ 3515 push  reg1
+ 3517 push  reg2
+ 3519 set   reg0 28090
+ 3522 set   reg1  1531
+ 3525 add   reg2 17290 10863
  3529 call  1458
- 3531 pop  32770
- 3533 pop  32769
- 3535 pop  32768
+ 3531 pop   reg2
+ 3533 pop   reg1
+ 3535 pop   reg0
  3537 jmp   3563
- 3539 push 32768
- 3541 push 32769
- 3543 push 32770
- 3545 set  32768 28100
- 3548 set  32769  1531
- 3551 add  32770   704    40
+ 3539 push  reg0
+ 3541 push  reg1
+ 3543 push  reg2
+ 3545 set   reg0 28100
+ 3548 set   reg1  1531
+ 3551 add   reg2   704    40
  3555 call  1458
- 3557 pop  32770
- 3559 pop  32769
- 3561 pop  32768
- 3563 pop  32769
- 3565 pop  32768
- 3567 ret  
- 3568 push 32768
- 3570 push 32769
+ 3557 pop   reg2
+ 3559 pop   reg1
+ 3561 pop   reg0
+ 3563 pop   reg1
+ 3565 pop   reg0
+ 3567 ret
+
+
+ 3568 push  reg0
+ 3570 push  reg1
  3572 call  5921
- 3574 jf   32768  3601
- 3577 add  32769 32768     2
- 3581 rmem 32769 32769
- 3584 jt   32769  3601
- 3587 add  32769 32768     3
- 3591 rmem 32769 32769
- 3594 jf   32769  3627
- 3597 call 32769
+ 3574 jf    reg0  3601
+ 3577 add   reg1  reg0     2
+ 3581 rmem  reg1  reg1
+ 3584 jt    reg1  3601  // SET TO ZERO
+ 3587 add   reg1  reg0     3
+ 3591 rmem  reg1  reg1
+ 3594 jf    reg1  3627
+ 3597 call  reg1
  3599 jmp   3651
- 3601 push 32768
- 3603 push 32769
- 3605 push 32770
- 3607 set  32768 28135
- 3610 set  32769  1531
- 3613 add  32770 10155  1732
+ 3601 push  reg0
+ 3603 push  reg1
+ 3605 push  reg2
+ 3607 set   reg0 28135
+ 3610 set   reg1  1531
+ 3613 add   reg2 10155  1732
  3617 call  1458
- 3619 pop  32770
- 3621 pop  32769
- 3623 pop  32768
+ 3619 pop   reg2
+ 3621 pop   reg1
+ 3623 pop   reg0
  3625 jmp   3651
- 3627 push 32768
- 3629 push 32769
- 3631 push 32770
- 3633 set  32768 28170
- 3636 set  32769  1531
- 3639 add  32770 10956  1315
+ 3627 push  reg0
+ 3629 push  reg1
+ 3631 push  reg2
+ 3633 set   reg0 28170
+ 3636 set   reg1  1531
+ 3639 add   reg2 10956  1315
  3643 call  1458
- 3645 pop  32770
- 3647 pop  32769
- 3649 pop  32768
- 3651 pop  32769
- 3653 pop  32768
- 3655 ret  
- 3656 push 32768
- 3658 push 32769
- 3660 push 32770
- 3662 set  32768  2680
+ 3645 pop   reg2
+ 3647 pop   reg1
+ 3649 pop   reg0
+ 3651 pop   reg1
+ 3653 pop   reg0
+ 3655 ret
+ 3656 push  reg0
+ 3658 push  reg1
+ 3660 push  reg2
+ 3662 set   reg0  2680
  3665 call  5990
- 3667 jt   32768  3694
- 3670 add  32768  2676     2
- 3674 wmem 32768 32767
- 3677 add  32768  2680     2
- 3681 wmem 32768 32767
- 3684 add  32768  2672     2
- 3688 wmem 32768 32767
+ 3667 jt    reg0  3694
+ 3670 add   reg0  2676     2
+ 3674 wmem  reg0 32767
+ 3677 add   reg0  2680     2
+ 3681 wmem  reg0 32767
+ 3684 add   reg0  2672     2
+ 3688 wmem  reg0 32767
  3691 wmem  2732  2648
- 3694 pop  32770
- 3696 pop  32769
- 3698 pop  32768
- 3700 ret  
- 3701 push 32768
- 3703 push 32769
- 3705 push 32770
- 3707 set  32768 28204
- 3710 set  32769  1531
- 3713 add  32770 10257 10328
+ 3694 pop   reg2
+ 3696 pop   reg1
+ 3698 pop   reg0
+ 3700 ret
+ 3701 push  reg0
+ 3703 push  reg1
+ 3705 push  reg2
+ 3707 set   reg0 28204
+ 3710 set   reg1  1531
+ 3713 add   reg2 10257 10328
  3717 call  1458
- 3719 pop  32770
- 3721 pop  32769
- 3723 pop  32768
- 3725 halt 
- 3726 halt 
- 3727 push 32769
- 3729 rmem 32769  3726
- 3732 or   32769 32769 32768
- 3736 wmem  3726 32769
- 3739 pop  32769
- 3741 ret  
+ 3719 pop   reg2
+ 3721 pop   reg1
+ 3723 pop   reg0
+ 3725 halt
+ 3726 halt
+ 3727 push  reg1
+ 3729 rmem  reg1  3726
+ 3732 or    reg1  reg1  reg0
+ 3736 wmem  3726  reg1
+ 3739 pop   reg1
+ 3741 ret
  3742 wmem  3726     0
- 3745 ret  
- 3746 push 32768
- 3748 set  32768     1
+ 3745 ret
+ 3746 push  reg0
+ 3748 set   reg0     1
  3751 call  3727
- 3753 pop  32768
- 3755 ret  
- 3756 push 32768
- 3758 set  32768     2
+ 3753 pop   reg0
+ 3755 ret
+ 3756 push  reg0
+ 3758 set   reg0     2
  3761 call  3727
- 3763 pop  32768
- 3765 ret  
- 3766 push 32768
- 3768 set  32768     4
+ 3763 pop   reg0
+ 3765 ret
+ 3766 push  reg0
+ 3768 set   reg0     4
  3771 call  3727
- 3773 pop  32768
- 3775 ret  
- 3776 push 32768
- 3778 set  32768     8
+ 3773 pop   reg0
+ 3775 ret
+ 3776 push  reg0
+ 3778 set   reg0     8
  3781 call  3727
- 3783 pop  32768
- 3785 ret  
- 3786 push 32768
- 3788 set  32768    16
+ 3783 pop   reg0
+ 3785 ret
+ 3786 push  reg0
+ 3788 set   reg0    16
  3791 call  3727
- 3793 pop  32768
- 3795 ret  
- 3796 push 32768
- 3798 set  32768    32
+ 3793 pop   reg0
+ 3795 ret
+ 3796 push  reg0
+ 3798 set   reg0    32
  3801 call  3727
- 3803 pop  32768
- 3805 ret  
- 3806 push 32768
- 3808 push 32769
- 3810 push 32770
- 3812 push 32771
- 3814 set  32768    64
+ 3803 pop   reg0
+ 3805 ret
+ 3806 push  reg0
+ 3808 push  reg1
+ 3810 push  reg2
+ 3812 push  reg3
+ 3814 set   reg0    64
  3817 call  3727
- 3819 push 32768
- 3821 push 32769
- 3823 push 32770
- 3825 set  32768 28236
- 3828 set  32769  1531
- 3831 add  32770  7765  5005
+ 3819 push  reg0
+ 3821 push  reg1
+ 3823 push  reg2
+ 3825 set   reg0 28236
+ 3828 set   reg1  1531
+ 3831 add   reg2  7765  5005
  3835 call  1458
- 3837 pop  32770
- 3839 pop  32769
- 3841 pop  32768
- 3843 rmem 32768  3726
- 3846 set  32769 25866
- 3849 set  32770 32767
- 3852 set  32771 28299
+ 3837 pop   reg2
+ 3839 pop   reg1
+ 3841 pop   reg0
+ 3843 rmem  reg0  3726
+ 3846 set   reg1 25866
+ 3849 set   reg2 32767
+ 3852 set   reg3 28299
  3855 call  1841
- 3857 push 32768
- 3859 push 32769
- 3861 push 32770
- 3863 set  32768 28303
- 3866 set  32769  1531
- 3869 add  32770 18219 10324
+ 3857 push  reg0
+ 3859 push  reg1
+ 3861 push  reg2
+ 3863 set   reg0 28303
+ 3866 set   reg1  1531
+ 3869 add   reg2 18219 10324
  3873 call  1458
- 3875 pop  32770
- 3877 pop  32769
- 3879 pop  32768
+ 3875 pop   reg2
+ 3877 pop   reg1
+ 3879 pop   reg0
  3881 wmem  2732  2417
- 3884 pop  32771
- 3886 pop  32770
- 3888 pop  32769
- 3890 pop  32768
- 3892 ret  
- 3893 push 32768
- 3895 push 32769
- 3897 rmem 32768  2462
- 3900 rmem 32769 27101
- 3903 eq   32768 32768 32769
- 3907 jt   32768  3940
- 3910 push 32768
- 3912 push 32769
- 3914 push 32770
- 3916 set  32768 28347
- 3919 set  32769  1531
- 3922 add  32770 18316 12530
+ 3884 pop   reg3
+ 3886 pop   reg2
+ 3888 pop   reg1
+ 3890 pop   reg0
+ 3892 ret
+ 3893 push  reg0
+ 3895 push  reg1
+ 3897 rmem  reg0  2462
+ 3900 rmem  reg1 27101
+ 3903 eq    reg0  reg0  reg1
+ 3907 jt    reg0  3940
+ 3910 push  reg0
+ 3912 push  reg1
+ 3914 push  reg2
+ 3916 set   reg0 28347
+ 3919 set   reg1  1531
+ 3922 add   reg2 18316 12530
  3926 call  1458
- 3928 pop  32770
- 3930 pop  32769
- 3932 pop  32768
+ 3928 pop   reg2
+ 3930 pop   reg1
+ 3932 pop   reg0
  3934 wmem  2732  2457
  3937 wmem  2733  2457
- 3940 pop  32769
- 3942 pop  32768
- 3944 ret  
- 3951 halt 
- 3953 halt 
- 3954 halt 
- 3955 halt 
- 3956 halt 
- 3957 halt 
- 3958 push 32768
- 3960 push 32769
- 3962 set  32768     2
- 3965 set  32769     0
+ 3940 pop   reg1
+ 3942 pop   reg0
+ 3944 ret
+ 3951 halt
+ 3953 halt
+ 3954 halt
+ 3955 halt
+ 3956 halt
+ 3957 halt
+ 3958 push  reg0
+ 3960 push  reg1
+ 3962 set   reg0     2
+ 3965 set   reg1     0
  3968 call  4218
- 3970 pop  32769
- 3972 pop  32768
- 3974 ret  
- 3975 push 32768
- 3977 push 32769
- 3979 set  32768     8
- 3982 set  32769     1
+ 3970 pop   reg1
+ 3972 pop   reg0
+ 3974 ret
+ 3975 push  reg0
+ 3977 push  reg1
+ 3979 set   reg0     8
+ 3982 set   reg1     1
  3985 call  4279
- 3987 pop  32769
- 3989 pop  32768
- 3991 ret  
- 3992 push 32768
- 3994 push 32769
- 3996 set  32768     1
- 3999 set  32769     2
+ 3987 pop   reg1
+ 3989 pop   reg0
+ 3991 ret
+ 3992 push  reg0
+ 3994 push  reg1
+ 3996 set   reg0     1
+ 3999 set   reg1     2
  4002 call  4218
- 4004 pop  32769
- 4006 pop  32768
- 4008 ret  
- 4009 push 32768
- 4011 push 32769
- 4013 set  32768     1
- 4016 set  32769     3
+ 4004 pop   reg1
+ 4006 pop   reg0
+ 4008 ret
+ 4009 push  reg0
+ 4011 push  reg1
+ 4013 set   reg0     1
+ 4016 set   reg1     3
  4019 call  4279
  4021 call  4533
- 4023 pop  32769
- 4025 pop  32768
- 4027 ret  
- 4028 push 32768
- 4030 push 32769
- 4032 set  32768     4
- 4035 set  32769     4
+ 4023 pop   reg1
+ 4025 pop   reg0
+ 4027 ret
+ 4028 push  reg0
+ 4030 push  reg1
+ 4032 set   reg0     4
+ 4035 set   reg1     4
  4038 call  4279
- 4040 pop  32769
- 4042 pop  32768
- 4044 ret  
- 4045 push 32768
- 4047 push 32769
- 4049 set  32768     2
- 4052 set  32769     5
+ 4040 pop   reg1
+ 4042 pop   reg0
+ 4044 ret
+ 4045 push  reg0
+ 4047 push  reg1
+ 4049 set   reg0     2
+ 4052 set   reg1     5
  4055 call  4218
- 4057 pop  32769
- 4059 pop  32768
- 4061 ret  
- 4062 push 32768
- 4064 push 32769
- 4066 set  32768    11
- 4069 set  32769     6
+ 4057 pop   reg1
+ 4059 pop   reg0
+ 4061 ret
+ 4062 push  reg0
+ 4064 push  reg1
+ 4066 set   reg0    11
+ 4069 set   reg1     6
  4072 call  4279
- 4074 pop  32769
- 4076 pop  32768
- 4078 ret  
- 4079 push 32768
- 4081 push 32769
- 4083 set  32768     2
- 4086 set  32769     7
+ 4074 pop   reg1
+ 4076 pop   reg0
+ 4078 ret
+ 4079 push  reg0
+ 4081 push  reg1
+ 4083 set   reg0     2
+ 4086 set   reg1     7
  4089 call  4218
- 4091 pop  32769
- 4093 pop  32768
- 4095 ret  
- 4096 push 32768
- 4098 push 32769
- 4100 set  32768     0
- 4103 set  32769     8
+ 4091 pop   reg1
+ 4093 pop   reg0
+ 4095 ret
+ 4096 push  reg0
+ 4098 push  reg1
+ 4100 set   reg0     0
+ 4103 set   reg1     8
  4106 call  4218
- 4108 pop  32769
- 4110 pop  32768
- 4112 ret  
- 4113 push 32768
- 4115 push 32769
- 4117 set  32768     4
- 4120 set  32769     9
+ 4108 pop   reg1
+ 4110 pop   reg0
+ 4112 ret
+ 4113 push  reg0
+ 4115 push  reg1
+ 4117 set   reg0     4
+ 4120 set   reg1     9
  4123 call  4279
- 4125 pop  32769
- 4127 pop  32768
- 4129 ret  
- 4130 push 32768
- 4132 push 32769
- 4134 set  32768     1
- 4137 set  32769    10
+ 4125 pop   reg1
+ 4127 pop   reg0
+ 4129 ret
+ 4130 push  reg0
+ 4132 push  reg1
+ 4134 set   reg0     1
+ 4137 set   reg1    10
  4140 call  4218
- 4142 pop  32769
- 4144 pop  32768
- 4146 ret  
- 4147 push 32768
- 4149 push 32769
- 4151 set  32768    18
- 4154 set  32769    11
+ 4142 pop   reg1
+ 4144 pop   reg0
+ 4146 ret
+ 4147 push  reg0
+ 4149 push  reg1
+ 4151 set   reg0    18
+ 4154 set   reg1    11
  4157 call  4279
- 4159 pop  32769
- 4161 pop  32768
- 4163 ret  
+ 4159 pop   reg1
+ 4161 pop   reg0
+ 4163 ret
  4164 call  4611
- 4166 ret  
- 4167 push 32768
- 4169 push 32769
- 4171 set  32768     1
- 4174 set  32769    12
+ 4166 ret
+ 4167 push  reg0
+ 4169 push  reg1
+ 4171 set   reg0     1
+ 4174 set   reg1    12
  4177 call  4218
- 4179 pop  32769
- 4181 pop  32768
- 4183 ret  
- 4184 push 32768
- 4186 push 32769
- 4188 set  32768     9
- 4191 set  32769    13
+ 4179 pop   reg1
+ 4181 pop   reg0
+ 4183 ret
+ 4184 push  reg0
+ 4186 push  reg1
+ 4188 set   reg0     9
+ 4191 set   reg1    13
  4194 call  4279
- 4196 pop  32769
- 4198 pop  32768
- 4200 ret  
- 4201 push 32768
- 4203 push 32769
- 4205 set  32768     2
- 4208 set  32769    14
+ 4196 pop   reg1
+ 4198 pop   reg0
+ 4200 ret
+ 4201 push  reg0
+ 4203 push  reg1
+ 4205 set   reg0     2
+ 4208 set   reg1    14
  4211 call  4218
- 4213 pop  32769
- 4215 pop  32768
- 4217 ret  
- 4218 push 32768
- 4220 push 32769
- 4222 push 32770
- 4224 add  32770  2716     2
- 4228 rmem 32770 32770
- 4231 jt   32770  4272
+ 4213 pop   reg1
+ 4215 pop   reg0
+ 4217 ret
+ 4218 push  reg0
+ 4220 push  reg1
+ 4222 push  reg2
+ 4224 add   reg2  2716     2
+ 4228 rmem  reg2  reg2
+ 4231 jt    reg2  4272
  4234 call  4405
- 4236 wmem  3951 32768
- 4239 add  32769 32768  3945
- 4243 rmem 32769 32769
- 4246 set  32768 26024
+ 4236 wmem  3951  reg0
+ 4239 add   reg1  reg0  3945
+ 4243 rmem  reg1  reg1
+ 4246 set   reg0 26024
  4249 call  1518
- 4251 set  32768 32769
+ 4251 set   reg0  reg1
  4254 call  1518
- 4256 set  32768 26088
+ 4256 set   reg0 26088
  4259 call  1518
- 4261 set  32768 32769
+ 4261 set   reg0  reg1
  4264 call  1518
  4266 out  .
 
 
- 4272 pop  32770
- 4274 pop  32769
- 4276 pop  32768
- 4278 ret  
- 4279 push 32768
- 4281 push 32769
- 4283 push 32770
- 4285 add  32770  2716     2
- 4289 rmem 32770 32770
- 4292 jt   32770  4398
+ 4272 pop   reg2
+ 4274 pop   reg1
+ 4276 pop   reg0
+ 4278 ret
+ 4279 push  reg0
+ 4281 push  reg1
+ 4283 push  reg2
+ 4285 add   reg2  2716     2
+ 4289 rmem  reg2  reg2
+ 4292 jt    reg2  4398
  4295 call  4405
- 4297 push 32768
- 4299 rmem 32768  3951
- 4302 add  32769 32768  3945
- 4306 rmem 32769 32769
- 4309 set  32768 26122
+ 4297 push  reg0
+ 4299 rmem  reg0  3951
+ 4302 add   reg1  reg0  3945
+ 4306 rmem  reg1  reg1
+ 4309 set   reg0 26122
  4312 call  1518
- 4314 set  32768 32769
+ 4314 set   reg0  reg1
  4317 call  1518
- 4319 set  32768 26170
+ 4319 set   reg0 26170
  4322 call  1518
- 4324 pop  32768
- 4326 set  32769 32768
- 4329 rmem 32768  3952
- 4332 rmem 32770  3951
- 4335 add  32770 32770  3948
- 4339 rmem 32770 32770
- 4342 call 32770
- 4344 jt   32769  4391
- 4347 rmem 32769  3952
- 4350 wmem  3952 32768
- 4353 gt   32770 32768 32769
- 4357 jf   32770  4369
- 4360 push 32768
- 4362 set  32768 26235
+ 4324 pop   reg0
+ 4326 set   reg1  reg0
+ 4329 rmem  reg0  3952
+ 4332 rmem  reg2  3951
+ 4335 add   reg2  reg2  3948
+ 4339 rmem  reg2  reg2
+ 4342 call  reg2
+ 4344 jt    reg1  4391
+ 4347 rmem  reg1  3952
+ 4350 wmem  3952  reg0
+ 4353 gt    reg2  reg0  reg1
+ 4357 jf    reg2  4369
+ 4360 push  reg0
+ 4362 set   reg0 26235
  4365 call  1518
- 4367 pop  32768
- 4369 gt   32770 32769 32768
- 4373 jf   32770  4385
- 4376 push 32768
- 4378 set  32768 26267
+ 4367 pop   reg0
+ 4369 gt    reg2  reg1  reg0
+ 4373 jf    reg2  4385
+ 4376 push  reg0
+ 4378 set   reg0 26267
  4381 call  1518
- 4383 pop  32768
- 4385 out  
+ 4383 pop   reg0
+ 4385 out
 
 
  4389 jmp   4398
  4391 call  4660
- 4393 set  32768 26299
+ 4393 set   reg0 26299
  4396 call  1518
- 4398 pop  32770
- 4400 pop  32769
- 4402 pop  32768
- 4404 ret  
- 4405 push 32768
- 4407 push 32769
- 4409 push 32770
- 4411 push 32771
- 4413 push 32772
- 4415 push 32773
- 4417 rmem 32773  3953
- 4420 gt   32771 32773 29999
- 4424 jt   32771  4434
- 4427 add  32773 32773     1
- 4431 wmem  3953 32773
- 4434 set  32771 32768
- 4437 set  32772 32769
- 4440 add  32768 32773     2
+ 4398 pop   reg2
+ 4400 pop   reg1
+ 4402 pop   reg0
+ 4404 ret
+ 4405 push  reg0
+ 4407 push  reg1
+ 4409 push  reg2
+ 4411 push  reg3
+ 4413 push  reg4
+ 4415 push  reg5
+ 4417 rmem  reg5  3953
+ 4420 gt    reg3  reg5 29999
+ 4424 jt    reg3  4434
+ 4427 add   reg5  reg5     1
+ 4431 wmem  3953  reg5
+ 4434 set   reg3  reg0
+ 4437 set   reg4  reg1
+ 4440 add   reg0  reg5     2
  4444 call  2281
- 4446 rmem 32769  3954
- 4449 or   32768 32769 32768
- 4453 set  32769 32772
+ 4446 rmem  reg1  3954
+ 4449 or    reg0  reg1  reg0
+ 4453 set   reg1  reg4
  4456 call  2248
- 4458 wmem  3954 32768
- 4461 set  32768  3955
- 4464 add  32769 32773     2
- 4468 set  32770 32772
+ 4458 wmem  3954  reg0
+ 4461 set   reg0  3955
+ 4464 add   reg1  reg5     2
+ 4468 set   reg2  reg4
  4471 call  4515
- 4473 set  32768  3956
- 4476 mult 32769 32773 32773
- 4480 mult 32770 32772 32772
+ 4473 set   reg0  3956
+ 4476 mult  reg1  reg5  reg5
+ 4480 mult  reg2  reg4  reg4
  4484 call  4515
- 4486 set  32768  3957
- 4489 set  32769    13
- 4492 mult 32770 32771     9
- 4496 mult 32770 32770 32770
+ 4486 set   reg0  3957
+ 4489 set   reg1    13
+ 4492 mult  reg2  reg3     9
+ 4496 mult  reg2  reg2  reg2
  4500 call  4515
- 4502 pop  32773
- 4504 pop  32772
- 4506 pop  32771
- 4508 pop  32770
- 4510 pop  32769
- 4512 pop  32768
- 4514 ret  
- 4515 push 32768
- 4517 rmem 32768 32768
+ 4502 pop   reg5
+ 4504 pop   reg4
+ 4506 pop   reg3
+ 4508 pop   reg2
+ 4510 pop   reg1
+ 4512 pop   reg0
+ 4514 ret
+ 4515 push  reg0
+ 4517 rmem  reg0  reg0
  4520 call  2248
- 4522 set  32769 32770
+ 4522 set   reg1  reg2
  4525 call  2125
- 4527 pop  32769
- 4529 wmem 32769 32768
- 4532 ret  
- 4533 push 32768
- 4535 add  32768  2716     2
- 4539 rmem 32768 32768
- 4542 jt   32768  4608
- 4545 set  32768 26321
+ 4527 pop   reg1
+ 4529 wmem  reg1  reg0
+ 4532 ret
+ 4533 push  reg0
+ 4535 add   reg0  2716     2
+ 4539 rmem  reg0  reg0
+ 4542 jt    reg0  4608
+ 4545 set   reg0 26321
  4548 call  1518
- 4550 rmem 32768  3952
- 4553 eq   32768 32768    30
- 4557 jt   32768  4574
- 4560 set  32768 26354
+ 4550 rmem  reg0  3952
+ 4553 eq    reg0  reg0    30
+ 4557 jt    reg0  4574
+ 4560 set   reg0 26354
  4563 call  1518
- 4565 set  32768 26398
+ 4565 set   reg0 26398
  4568 call  1518
  4570 call  4660
  4572 jmp   4608
- 4574 set  32768 26440
+ 4574 set   reg0 26440
  4577 call  1518
- 4579 rmem 32768  3954
- 4582 add  32768 32768     1
- 4586 jt   32768  4596
- 4589 set  32768 26484
+ 4579 rmem  reg0  3954
+ 4582 add   reg0  reg0     1
+ 4586 jt    reg0  4596
+ 4589 set   reg0 26484
  4592 call  1518
  4594 jmp   4565
- 4596 set  32768 26584
+ 4596 set   reg0 26584
  4599 call  1518
- 4601 add  32768  2716     2
- 4605 wmem 32768 32767
- 4608 pop  32768
- 4610 ret  
- 4611 push 32768
- 4613 add  32768  2716     2
- 4617 rmem 32768 32768
- 4620 jt   32768  4657
- 4623 set  32768 26717
+ 4601 add   reg0  2716     2
+ 4605 wmem  reg0 32767
+ 4608 pop   reg0
+ 4610 ret
+ 4611 push  reg0
+ 4613 add   reg0  2716     2
+ 4617 rmem  reg0  reg0
+ 4620 jt    reg0  4657
+ 4623 set   reg0 26717
  4626 call  1518
- 4628 rmem 32768  2732
- 4631 eq   32768 32768  2623
- 4635 jt   32768  4645
- 4638 set  32768 26725
+ 4628 rmem  reg0  2732
+ 4631 eq    reg0  reg0  2623
+ 4635 jt    reg0  4645
+ 4638 set   reg0 26725
  4641 call  1518
  4643 jmp   4650
- 4645 set  32768 26731
+ 4645 set   reg0 26731
  4648 call  1518
- 4650 set  32768 26737
+ 4650 set   reg0 26737
  4653 call  1518
  4655 call  4660
- 4657 pop  32768
- 4659 ret  
- 4660 push 32768
+ 4657 pop   reg0
+ 4659 ret
+ 4660 push  reg0
  4662 wmem  3952    22
  4665 wmem  3953     0
  4668 wmem  3954     0
  4671 wmem  3955     0
  4674 wmem  3956     0
  4677 wmem  3957     0
- 4680 add  32768  2716     2
- 4684 wmem 32768  2623
- 4687 pop  32768
- 4689 ret  
- 4690 push 32768
- 4692 add  32768  2716     2
- 4696 rmem 32768 32768
- 4699 eq   32768 32768 32767
- 4703 jt   32768  4717
- 4706 set  32768 26824
+ 4680 add   reg0  2716     2
+ 4684 wmem  reg0  2623
+ 4687 pop   reg0
+ 4689 ret
+ 4690 push  reg0
+ 4692 add   reg0  2716     2
+ 4696 rmem  reg0  reg0
+ 4699 eq    reg0  reg0 32767
+ 4703 jt    reg0  4717
+ 4706 set   reg0 26824
  4709 call  1518
  4711 wmem  2732  2578
  4714 wmem  2733  2578
- 4717 pop  32768
- 4719 ret  
- 4720 push 32768
- 4722 push 32769
- 4724 push 32770
- 4726 push 32771
- 4728 push 32768
- 4730 push 32769
- 4732 push 32770
- 4734 set  32768 28369
- 4737 set  32769  1531
- 4740 add  32770  1168  3816
+ 4717 pop   reg0
+ 4719 ret
+ 4720 push  reg0
+ 4722 push  reg1
+ 4724 push  reg2
+ 4726 push  reg3
+ 4728 push  reg0
+ 4730 push  reg1
+ 4732 push  reg2
+ 4734 set   reg0 28369
+ 4737 set   reg1  1531
+ 4740 add   reg2  1168  3816
  4744 call  1458
- 4746 pop  32770
- 4748 pop  32769
- 4750 pop  32768
- 4752 set  32768  4242
- 4755 set  32769 25866
- 4758 set  32770 32767
- 4761 set  32771 28397
+ 4746 pop   reg2
+ 4748 pop   reg1
+ 4750 pop   reg0
+ 4752 set   reg0  4242
+ 4755 set   reg1 25866
+ 4758 set   reg2 32767
+ 4761 set   reg3 28397
  4764 call  1841
- 4766 push 32768
- 4768 push 32769
- 4770 push 32770
- 4772 set  32768 28401
- 4775 set  32769  1531
- 4778 add  32770 12365 14882
+ 4766 push  reg0
+ 4768 push  reg1
+ 4770 push  reg2
+ 4772 set   reg0 28401
+ 4775 set   reg1  1531
+ 4778 add   reg2 12365 14882
  4782 call  1458
- 4784 pop  32770
- 4786 pop  32769
- 4788 pop  32768
- 4790 pop  32771
- 4792 pop  32770
- 4794 pop  32769
- 4796 pop  32768
- 4798 ret  
- 4799 push 32768
- 4801 add  32768  2672     2
- 4805 rmem 32768 32768
- 4808 jt   32768  4858
- 4811 add  32768  2684     2
- 4815 wmem 32768 32767
- 4818 add  32768  2672     2
- 4822 wmem 32768 32767
- 4825 add  32768  2676     2
- 4829 wmem 32768     0
- 4832 push 32768
- 4834 push 32769
- 4836 push 32770
- 4838 set  32768 28453
- 4841 set  32769  1531
- 4844 add  32770 12294  1125
+ 4784 pop   reg2
+ 4786 pop   reg1
+ 4788 pop   reg0
+ 4790 pop   reg3
+ 4792 pop   reg2
+ 4794 pop   reg1
+ 4796 pop   reg0
+ 4798 ret
+ 4799 push  reg0
+ 4801 add   reg0  2672     2
+ 4805 rmem  reg0  reg0
+ 4808 jt    reg0  4858
+ 4811 add   reg0  2684     2
+ 4815 wmem  reg0 32767
+ 4818 add   reg0  2672     2
+ 4822 wmem  reg0 32767
+ 4825 add   reg0  2676     2
+ 4829 wmem  reg0     0
+ 4832 push  reg0
+ 4834 push  reg1
+ 4836 push  reg2
+ 4838 set   reg0 28453
+ 4841 set   reg1  1531
+ 4844 add   reg2 12294  1125
  4848 call  1458
- 4850 pop  32770
- 4852 pop  32769
- 4854 pop  32768
+ 4850 pop   reg2
+ 4852 pop   reg1
+ 4854 pop   reg0
  4856 jmp   4882
- 4858 push 32768
- 4860 push 32769
- 4862 push 32770
- 4864 set  32768 28510
- 4867 set  32769  1531
- 4870 add  32770 12839  9792
+ 4858 push  reg0
+ 4860 push  reg1
+ 4862 push  reg2
+ 4864 set   reg0 28510
+ 4867 set   reg1  1531
+ 4870 add   reg2 12839  9792
  4874 call  1458
- 4876 pop  32770
- 4878 pop  32769
- 4880 pop  32768
- 4882 pop  32768
- 4884 ret  
- 4885 push 32768
- 4887 add  32768  2676     2
- 4891 wmem 32768 32767
- 4894 add  32768  2680     2
- 4898 wmem 32768     0
- 4901 push 32768
- 4903 push 32769
- 4905 push 32770
- 4907 set  32768 28569
- 4910 set  32769  1531
- 4913 add  32770 28822  1889
+ 4876 pop   reg2
+ 4878 pop   reg1
+ 4880 pop   reg0
+ 4882 pop   reg0
+ 4884 ret
+ 4885 push  reg0
+ 4887 add   reg0  2676     2
+ 4891 wmem  reg0 32767
+ 4894 add   reg0  2680     2
+ 4898 wmem  reg0     0
+ 4901 push  reg0
+ 4903 push  reg1
+ 4905 push  reg2
+ 4907 set   reg0 28569
+ 4910 set   reg1  1531
+ 4913 add   reg2 28822  1889
  4917 call  1458
- 4919 pop  32770
- 4921 pop  32769
- 4923 pop  32768
+ 4919 pop   reg2
+ 4921 pop   reg1
+ 4923 pop   reg0
  4925 wmem  2733     0
- 4928 pop  32768
- 4930 ret  
- 4931 push 32768
- 4933 add  32768  2676     2
- 4937 wmem 32768     0
- 4940 add  32768  2680     2
- 4944 wmem 32768 32767
- 4947 push 32768
- 4949 push 32769
- 4951 push 32770
- 4953 set  32768 28595
- 4956 set  32769  1531
- 4959 add  32770  7793 17268
+ 4928 pop   reg0
+ 4930 ret
+ 4931 push  reg0
+ 4933 add   reg0  2676     2
+ 4937 wmem  reg0     0
+ 4940 add   reg0  2680     2
+ 4944 wmem  reg0 32767
+ 4947 push  reg0
+ 4949 push  reg1
+ 4951 push  reg2
+ 4953 set   reg0 28595
+ 4956 set   reg1  1531
+ 4959 add   reg2  7793 17268
  4963 call  1458
- 4965 pop  32770
- 4967 pop  32769
- 4969 pop  32768
+ 4965 pop   reg2
+ 4967 pop   reg1
+ 4969 pop   reg0
  4971 wmem  2733     0
- 4974 pop  32768
- 4976 ret  
- 4977 push 32770
- 4979 push 32771
- 4981 rmem 32770  2732
- 4984 eq   32770 32770  2457
- 4988 jt   32770  5017
- 4991 push 32768
- 4993 push 32769
- 4995 push 32770
- 4997 set  32768 28621
- 5000 set  32769  1531
- 5003 add  32770 21888  4457
+ 4974 pop   reg0
+ 4976 ret
+ 4977 push  reg2
+ 4979 push  reg3
+ 4981 rmem  reg2  2732
+ 4984 eq    reg2  reg2  2457
+ 4988 jt    reg2  5017
+ 4991 push  reg0
+ 4993 push  reg1
+ 4995 push  reg2
+ 4997 set   reg0 28621
+ 5000 set   reg1  1531
+ 5003 add   reg2 21888  4457
  5007 call  1458
- 5009 pop  32770
- 5011 pop  32769
- 5013 pop  32768
+ 5009 pop   reg2
+ 5011 pop   reg1
+ 5013 pop   reg0
  5015 jmp   5336
- 5017 add  32770 32768     2
- 5021 wmem 32770 32767
- 5024 rmem 32770  2462
- 5027 add  32770 32770 27095
- 5031 add  32770 32770     1
- 5035 rmem 32770 32770
- 5038 add  32771  2457     1
- 5042 rmem 32771 32771
- 5045 add  32771 32771 32770
- 5049 add  32770 32769    48
- 5053 wmem 32771 32770
- 5056 rmem 32770  2462
- 5059 add  32770 32770 27101
- 5063 add  32770 32770     1
- 5067 wmem 32770 32769
- 5070 push 32768
- 5072 push 32768
- 5074 push 32769
- 5076 push 32770
- 5078 set  32768 28664
- 5081 set  32769  1531
- 5084 add  32770  4764  3298
+ 5017 add   reg2  reg0     2
+ 5021 wmem  reg2 32767
+ 5024 rmem  reg2  2462
+ 5027 add   reg2  reg2 27095
+ 5031 add   reg2  reg2     1
+ 5035 rmem  reg2  reg2
+ 5038 add   reg3  2457     1
+ 5042 rmem  reg3  reg3
+ 5045 add   reg3  reg3  reg2
+ 5049 add   reg2  reg1    48
+ 5053 wmem  reg3  reg2
+ 5056 rmem  reg2  2462
+ 5059 add   reg2  reg2 27101
+ 5063 add   reg2  reg2     1
+ 5067 wmem  reg2  reg1
+ 5070 push  reg0
+ 5072 push  reg0
+ 5074 push  reg1
+ 5076 push  reg2
+ 5078 set   reg0 28664
+ 5081 set   reg1  1531
+ 5084 add   reg2  4764  3298
  5088 call  1458
- 5090 pop  32770
- 5092 pop  32769
- 5094 pop  32768
- 5096 pop  32768
- 5098 push 32768
- 5100 add  32770 32768     0
- 5104 rmem 32768 32770
+ 5090 pop   reg2
+ 5092 pop   reg1
+ 5094 pop   reg0
+ 5096 pop   reg0
+ 5098 push  reg0
+ 5100 add   reg2  reg0     0
+ 5104 rmem  reg0  reg2
  5107 call  1518
- 5109 pop  32768
- 5111 push 32768
- 5113 push 32768
- 5115 push 32769
- 5117 push 32770
- 5119 set  32768 28679
- 5122 set  32769  1531
- 5125 add  32770  6681 23778
+ 5109 pop   reg0
+ 5111 push  reg0
+ 5113 push  reg0
+ 5115 push  reg1
+ 5117 push  reg2
+ 5119 set   reg0 28679
+ 5122 set   reg1  1531
+ 5125 add   reg2  6681 23778
  5129 call  1458
- 5131 pop  32770
- 5133 pop  32769
- 5135 pop  32768
- 5137 pop  32768
- 5139 rmem 32770  2462
- 5142 add  32770 32770     1
- 5146 wmem  2462 32770
- 5149 rmem 32771 27101
- 5152 eq   32771 32770 32771
- 5156 jf   32771  5336
- 5159 set  32768     0
- 5162 add  32769 27101     1
- 5166 rmem 32769 32769
- 5169 add  32768 32768 32769
- 5173 add  32769 27101     2
- 5177 rmem 32769 32769
- 5180 add  32770 27101     3
- 5184 rmem 32770 32770
- 5187 mult 32770 32770 32770
- 5191 mult 32769 32769 32770
- 5195 add  32768 32768 32769
- 5199 add  32769 27101     4
- 5203 rmem 32769 32769
- 5206 mult 32770 32769 32769
- 5210 mult 32770 32770 32769
- 5214 add  32768 32768 32770
- 5218 add  32769 27101     5
- 5222 rmem 32769 32769
- 5225 mult 32769 32769 32767
- 5229 add  32768 32768 32769
- 5233 eq   32769 32768   399
- 5237 jt   32769  5312
- 5240 add  32770  2688     2
- 5244 wmem 32770  2457
- 5247 add  32770  2692     2
- 5251 wmem 32770  2457
- 5254 add  32770  2696     2
- 5258 wmem 32770  2457
- 5261 add  32770  2700     2
- 5265 wmem 32770  2457
- 5268 add  32770  2704     2
- 5272 wmem 32770  2457
+ 5131 pop   reg2
+ 5133 pop   reg1
+ 5135 pop   reg0
+ 5137 pop   reg0
+ 5139 rmem  reg2  2462
+ 5142 add   reg2  reg2     1
+ 5146 wmem  2462  reg2
+ 5149 rmem  reg3 27101
+ 5152 eq    reg3  reg2  reg3
+ 5156 jf    reg3  5336
+ 5159 set   reg0     0
+ 5162 add   reg1 27101     1
+ 5166 rmem  reg1  reg1
+ 5169 add   reg0  reg0  reg1
+ 5173 add   reg1 27101     2
+ 5177 rmem  reg1  reg1
+ 5180 add   reg2 27101     3
+ 5184 rmem  reg2  reg2
+ 5187 mult  reg2  reg2  reg2
+ 5191 mult  reg1  reg1  reg2
+ 5195 add   reg0  reg0  reg1
+ 5199 add   reg1 27101     4
+ 5203 rmem  reg1  reg1
+ 5206 mult  reg2  reg1  reg1
+ 5210 mult  reg2  reg2  reg1
+ 5214 add   reg0  reg0  reg2
+ 5218 add   reg1 27101     5
+ 5222 rmem  reg1  reg1
+ 5225 mult  reg1  reg1 32767
+ 5229 add   reg0  reg0  reg1
+ 5233 eq    reg1  reg0   399
+ 5237 jt    reg1  5312
+ 5240 add   reg2  2688     2
+ 5244 wmem  reg2  2457
+ 5247 add   reg2  2692     2
+ 5251 wmem  reg2  2457
+ 5254 add   reg2  2696     2
+ 5258 wmem  reg2  2457
+ 5261 add   reg2  2700     2
+ 5265 wmem  reg2  2457
+ 5268 add   reg2  2704     2
+ 5272 wmem  reg2  2457
  5275 wmem  2462     0
- 5278 set  32768 27095
- 5281 set  32769  5341
+ 5278 set   reg0 27095
+ 5281 set   reg1  5341
  5284 call  1458
- 5286 push 32768
- 5288 push 32769
- 5290 push 32770
- 5292 set  32768 28710
- 5295 set  32769  1531
- 5298 add  32770  1992  2337
+ 5286 push  reg0
+ 5288 push  reg1
+ 5290 push  reg2
+ 5292 set   reg0 28710
+ 5295 set   reg1  1531
+ 5298 add   reg2  1992  2337
  5302 call  1458
- 5304 pop  32770
- 5306 pop  32769
- 5308 pop  32768
+ 5304 pop   reg2
+ 5306 pop   reg1
+ 5308 pop   reg0
  5310 jmp   5336
- 5312 push 32768
- 5314 push 32769
- 5316 push 32770
- 5318 set  32768 28777
- 5321 set  32769  1531
- 5324 add  32770 16616  1040
+ 5312 push  reg0
+ 5314 push  reg1
+ 5316 push  reg2
+ 5318 set   reg0 28777
+ 5321 set   reg1  1531
+ 5324 add   reg2 16616  1040
  5328 call  1458
- 5330 pop  32770
- 5332 pop  32769
- 5334 pop  32768
- 5336 pop  32771
- 5338 pop  32770
- 5340 ret  
- 5341 push 32770
- 5343 add  32770  2457     1
- 5347 rmem 32770 32770
- 5350 add  32770 32770 32768
- 5354 wmem 32770    95
- 5357 pop  32770
- 5359 ret  
- 5360 push 32768
- 5362 push 32769
- 5364 set  32768  2688
- 5367 set  32769     2
+ 5330 pop   reg2
+ 5332 pop   reg1
+ 5334 pop   reg0
+ 5336 pop   reg3
+ 5338 pop   reg2
+ 5340 ret
+ 5341 push  reg2
+ 5343 add   reg2  2457     1
+ 5347 rmem  reg2  reg2
+ 5350 add   reg2  reg2  reg0
+ 5354 wmem  reg2    95
+ 5357 pop   reg2
+ 5359 ret
+ 5360 push  reg0
+ 5362 push  reg1
+ 5364 set   reg0  2688
+ 5367 set   reg1     2
  5370 call  4977
- 5372 pop  32769
- 5374 pop  32768
- 5376 ret  
- 5377 push 32768
- 5379 push 32769
- 5381 set  32768  2692
- 5384 set  32769     3
+ 5372 pop   reg1
+ 5374 pop   reg0
+ 5376 ret
+ 5377 push  reg0
+ 5379 push  reg1
+ 5381 set   reg0  2692
+ 5384 set   reg1     3
  5387 call  4977
- 5389 pop  32769
- 5391 pop  32768
- 5393 ret  
- 5394 push 32768
- 5396 push 32769
- 5398 set  32768  2696
- 5401 set  32769     5
+ 5389 pop   reg1
+ 5391 pop   reg0
+ 5393 ret
+ 5394 push  reg0
+ 5396 push  reg1
+ 5398 set   reg0  2696
+ 5401 set   reg1     5
  5404 call  4977
- 5406 pop  32769
- 5408 pop  32768
- 5410 ret  
- 5411 push 32768
- 5413 push 32769
- 5415 set  32768  2700
- 5418 set  32769     7
+ 5406 pop   reg1
+ 5408 pop   reg0
+ 5410 ret
+ 5411 push  reg0
+ 5413 push  reg1
+ 5415 set   reg0  2700
+ 5418 set   reg1     7
  5421 call  4977
- 5423 pop  32769
- 5425 pop  32768
- 5427 ret  
- 5428 push 32768
- 5430 push 32769
- 5432 set  32768  2704
- 5435 set  32769     9
+ 5423 pop   reg1
+ 5425 pop   reg0
+ 5427 ret
+ 5428 push  reg0
+ 5430 push  reg1
+ 5432 set   reg0  2704
+ 5435 set   reg1     9
  5438 call  4977
- 5440 pop  32769
- 5442 pop  32768
- 5444 ret  
- 5445 push 32768
- 5447 push 32769
- 5449 push 32770
- 5451 jf   32775  5605
- 5454 push 32768
- 5456 push 32769
- 5458 push 32770
- 5460 set  32768 28844
- 5463 set  32769  1531
- 5466 add  32770  6705   330
- 5470 call  1458
- 5472 pop  32770
- 5474 pop  32769
- 5476 pop  32768
- 5478 noop 
- 5479 noop 
- 5480 noop 
- 5481 noop 
- 5482 noop 
- 5483 set  32768     4
- 5486 set  32769     1
- 5489 call  6027
- 5491 eq   32769 32768     6
- 5495 jf   32769  5579
- 5498 push 32768
- 5500 push 32769
- 5502 push 32770
- 5504 set  32768 29014
- 5507 set  32769  1531
- 5510 add  32770 28400  3845
+ 5440 pop   reg1
+ 5442 pop   reg0
+ 5444 ret
+
+Teleport?
+ 5445 push  reg0
+ 5447 push  reg1
+ 5449 push  reg2
+ 5451 jf    reg7  5605       // If zero, is good
+ 5454 push  reg0
+ 5456 push  reg1
+ 5458 push  reg2
+ 5460 set   reg0 28844
+ 5463 set   reg1  1531
+ 5466 add   reg2  6705   330
+ 5470 call  1458             // print time warning
+ 5472 pop   reg2
+ 5474 pop   reg1
+ 5476 pop   reg0
+ 5478 noop
+ 5479 noop
+ 5480 noop
+ 5481 noop
+ 5482 noop
+ 5483 set   reg0     4
+ 5486 set   reg1     1
+ 5489 call  6027             // validation function
+ 5491 eq    reg1  reg0     6 // reg0 = 6 -> validation success
+ 5495 jf    reg1  5579
+ 5498 push  reg0
+ 5500 push  reg1
+ 5502 push  reg2
+ 5504 set   reg0 29014
+ 5507 set   reg1  1531
+ 5510 add   reg2 28400  3845
  5514 call  1458
- 5516 pop  32770
- 5518 pop  32769
- 5520 pop  32768
- 5522 set  32768 32775
- 5525 set  32769 25866
- 5528 set  32770 32767
- 5531 push 32771
- 5533 set  32771 29241
+ 5516 pop   reg2
+ 5518 pop   reg1
+ 5520 pop   reg0
+ 5522 set   reg0  reg7
+ 5525 set   reg1 25866
+ 5528 set   reg2 32767
+ 5531 push  reg3
+ 5533 set   reg3 29241
  5536 call  1841
- 5538 pop  32771
- 5540 push 32768
- 5542 push 32769
- 5544 push 32770
- 5546 set  32768 29245
- 5549 set  32769  1531
- 5552 add  32770  1797  7402
+ 5538 pop   reg3
+ 5540 push  reg0
+ 5542 push  reg1
+ 5544 push  reg2
+ 5546 set   reg0 29245
+ 5549 set   reg1  1531
+ 5552 add   reg2  1797  7402
  5556 call  1458
- 5558 pop  32770
- 5560 pop  32769
- 5562 pop  32768
+ 5558 pop   reg2
+ 5560 pop   reg1
+ 5562 pop   reg0
  5564 wmem  2732  2498
  5567 wmem  2733     0
- 5570 add  32769  2708     2
- 5574 wmem 32769 32767
+ 5570 add   reg1  2708     2
+ 5574 wmem  reg1 32767
  5577 jmp   5714
- 5579 push 32768
- 5581 push 32769
- 5583 push 32770
- 5585 set  32768 29400
- 5588 set  32769  1531
- 5591 add  32770  6160  6489
+ 5579 push  reg0
+ 5581 push  reg1
+ 5583 push  reg2
+ 5585 set   reg0 29400
+ 5588 set   reg1  1531
+ 5591 add   reg2  6160  6489
  5595 call  1458
- 5597 pop  32770
- 5599 pop  32769
- 5601 pop  32768
+ 5597 pop   reg2
+ 5599 pop   reg1
+ 5601 pop   reg0
  5603 jmp   5714
- 5605 push 32768
- 5607 push 32769
- 5609 push 32770
- 5611 set  32768 29545
- 5614 set  32769  1531
- 5617 add  32770  7326  1750
- 5621 call  1458
- 5623 pop  32770
- 5625 pop  32769
- 5627 pop  32768
- 5629 set  32768     0
- 5632 add  32770     1 27101
- 5636 rmem 32769 32770
- 5639 add  32768 32768 32769
- 5643 mult 32768 32768 31660
+ 5605 push  reg0               // Start teleportation
+ 5607 push  reg1
+ 5609 push  reg2
+ 5611 set   reg0 29545
+ 5614 set   reg1  1531
+ 5617 add   reg2  7326  1750
+ 5621 call  1458              // Print time warning
+ 5623 pop   reg2
+ 5625 pop   reg1
+ 5627 pop   reg0
+ 5629 set   reg0     0
+ 5632 add   reg2     1 27101
+ 5636 rmem  reg1  reg2
+ 5639 add   reg0  reg0  reg1
+ 5643 mult  reg0  reg0 31660
  5647 call  2125
- 5649 rmem 32769 27101
- 5652 add  32769 32769 27101
- 5656 add  32770 32770     1
- 5660 gt   32769 32770 32769
- 5664 jf   32769  5636
- 5667 set  32769 25866
- 5670 set  32770 32767
- 5673 push 32771
- 5675 set  32771 29663
+ 5649 rmem  reg1 27101
+ 5652 add   reg1  reg1 27101
+ 5656 add   reg2  reg2     1
+ 5660 gt    reg1  reg2  reg1
+ 5664 jf    reg1  5636
+ 5667 set   reg1 25866
+ 5670 set   reg2 32767
+ 5673 push  reg3
+ 5675 set   reg3 29663
  5678 call  1841
- 5680 pop  32771
- 5682 push 32768
- 5684 push 32769
- 5686 push 32770
- 5688 set  32768 29667
- 5691 set  32769  1531
- 5694 add  32770  4556 27046
+ 5680 pop   reg3
+ 5682 push  reg0
+ 5684 push  reg1
+ 5686 push  reg2
+ 5688 set   reg0 29667
+ 5691 set   reg1  1531
+ 5694 add   reg2  4556 27046
  5698 call  1458
- 5700 pop  32770
- 5702 pop  32769
- 5704 pop  32768
+ 5700 pop   reg2
+ 5702 pop   reg1
+ 5704 pop   reg0
  5706 wmem  2732  2488
  5709 wmem  2733     0
  5712 jmp   5714
- 5714 pop  32770
- 5716 pop  32769
- 5718 pop  32768
- 5720 ret  
- 5721 push 32768
- 5723 push 32769
- 5725 push 32770
- 5727 push 32771
- 5729 push 32768
- 5731 push 32769
- 5733 push 32770
- 5735 set  32768 29757
- 5738 set  32769  1531
- 5741 add  32770  7358  4006
+ 5714 pop   reg2
+ 5716 pop   reg1
+ 5718 pop   reg0
+ 5720 ret
+ 5721 push  reg0
+ 5723 push  reg1
+ 5725 push  reg2
+ 5727 push  reg3
+ 5729 push  reg0
+ 5731 push  reg1
+ 5733 push  reg2
+ 5735 set   reg0 29757
+ 5738 set   reg1  1531
+ 5741 add   reg2  7358  4006
  5745 call  1458
- 5747 pop  32770
- 5749 pop  32769
- 5751 pop  32768
- 5753 rmem 32768  3955
- 5756 rmem 32769  3956
+ 5747 pop   reg2
+ 5749 pop   reg1
+ 5751 pop   reg0
+ 5753 rmem  reg0  3955
+ 5756 rmem  reg1  3956
  5759 call  2125
- 5761 rmem 32769  3957
+ 5761 rmem  reg1  3957
  5764 call  2125
- 5766 set  32769 25919
- 5769 set  32770     4
- 5772 push 32771
- 5774 set  32771 29942
+ 5766 set   reg1 25919
+ 5769 set   reg2     4
+ 5772 push  reg3
+ 5774 set   reg3 29942
  5777 call  1841
- 5779 pop  32771
- 5781 push 32768
- 5783 push 32769
- 5785 push 32770
- 5787 set  32768 29946
- 5790 set  32769  1531
- 5793 add  32770  1868 21149
+ 5779 pop   reg3
+ 5781 push  reg0
+ 5783 push  reg1
+ 5785 push  reg2
+ 5787 set   reg0 29946
+ 5790 set   reg1  1531
+ 5793 add   reg2  1868 21149
  5797 call  1458
- 5799 pop  32770
- 5801 pop  32769
- 5803 pop  32768
- 5805 pop  32771
- 5807 pop  32770
- 5809 pop  32769
- 5811 pop  32768
- 5813 ret  
- 5814 out  - 
- 5818 call  1518
- 5820 out  
+ 5799 pop   reg2
+ 5801 pop   reg1
+ 5803 pop   reg0
+ 5805 pop   reg3
+ 5807 pop   reg2
+ 5809 pop   reg1
+ 5811 pop   reg0
+ 5813 ret
 
- 5822 ret  
- 5823 push 32769
- 5825 push 32770
- 5827 set  32768 27381
- 5830 set  32769  5846
- 5833 set  32770     0
+Print bullet
+ 5814 out  -
+ 5818 call  1518
+ 5820 out
+
+ 5822 ret
+
+FUNCTION
+ 5823 push  reg1         // Save registers 1 and 2
+ 5825 push  reg2
+ 5827 set   reg0 27381
+ 5830 set   reg1  5846
+ 5833 set   reg2     0
  5836 call  1458
- 5838 set  32768 32770
- 5841 pop  32770
- 5843 pop  32769
- 5845 ret  
- 5846 push 32771
- 5848 push 32772
- 5850 rmem 32771  2732
- 5853 add  32772 32768     2
- 5857 rmem 32772 32772
- 5860 eq   32771 32771 32772
- 5864 jf   32771  5871
- 5867 add  32770 32770     1
- 5871 pop  32772
- 5873 pop  32771
- 5875 ret  
- 5876 push 32768
- 5878 push 32769
- 5880 set  32768 27381
- 5883 set  32769  5893
+ 5838 set   reg0  reg2
+ 5841 pop   reg2
+ 5843 pop   reg1
+ 5845 ret
+
+FUNCTION
+ 5846 push  reg3
+ 5848 push  reg4
+ 5850 rmem  reg3  2732
+ 5853 add   reg4  reg0     2
+ 5857 rmem  reg4  reg4
+ 5860 eq    reg3  reg3  reg4
+ 5864 jf    reg3  5871
+ 5867 add   reg2  reg2     1
+ 5871 pop   reg4
+ 5873 pop   reg3
+ 5875 ret
+
+Print list of stuff
+ 5876 push  reg0
+ 5878 push  reg1
+ 5880 set   reg0 27381
+ 5883 set   reg1  5893
  5886 call  1458
- 5888 pop  32769
- 5890 pop  32768
- 5892 ret  
- 5893 push 32771
- 5895 add  32771 32768     2
- 5899 rmem 32771 32771
- 5902 eq   32771 32770 32771
- 5906 jf   32771  5918
- 5909 add  32768 32768     0
- 5913 rmem 32768 32768
+ 5888 pop   reg1
+ 5890 pop   reg0
+ 5892 ret
+
+Get item bullet content and print?
+ 5893 push  reg3
+ 5895 add   reg3  reg0     2
+ 5899 rmem  reg3  reg3
+ 5902 eq    reg3  reg2  reg3
+ 5906 jf    reg3  5918         // SET TO 0
+ 5909 add   reg0  reg0     0
+ 5913 rmem  reg0  reg0
  5916 call  5814
- 5918 pop  32771
- 5920 ret  
- 5921 push 32769
- 5923 push 32770
- 5925 set  32770 32768
- 5928 set  32768 27381
- 5931 set  32769  5964
+ 5918 pop   reg3
+ 5920 ret
+
+
+ 5921 push  reg1
+ 5923 push  reg2
+ 5925 set   reg2  reg0
+ 5928 set   reg0 27381
+ 5931 set   reg1  5964
  5934 call  1543
- 5936 eq   32769 32768 32767
- 5940 jt   32769  5956
- 5943 add  32769 27381 32768
- 5947 add  32769 32769     1
- 5951 rmem 32768 32769
+ 5936 eq    reg1  reg0 32767
+ 5940 jt    reg1  5956
+ 5943 add   reg1 27381  reg0
+ 5947 add   reg1  reg1     1
+ 5951 rmem  reg0  reg1
  5954 jmp   5959
- 5956 set  32768     0
- 5959 pop  32770
- 5961 pop  32769
- 5963 ret  
- 5964 push 32769
- 5966 set  32769 32770
- 5969 add  32768 32768     0
- 5973 rmem 32768 32768
+ 5956 set   reg0     0
+ 5959 pop   reg2
+ 5961 pop   reg1
+ 5963 ret
+
+
+ 5964 push  reg1
+ 5966 set   reg1  reg2
+ 5969 add   reg0  reg0     0
+ 5973 rmem  reg0  reg0
  5976 call  1667
- 5978 pop  32769
- 5980 jf   32768  5989
- 5983 set  32770 32769
- 5986 set  32769 32767
- 5989 ret  
- 5990 push 32769
- 5992 push 32770
- 5994 add  32768 32768     2
- 5998 rmem 32768 32768
- 6001 jf   32768  6019
- 6004 rmem 32769  2732
- 6007 eq   32769 32768 32769
- 6011 jt   32769  6019
- 6014 set  32768     0
+ 5978 pop   reg1
+ 5980 jf    reg0  5989
+ 5983 set   reg2  reg1
+ 5986 set   reg1 32767
+ 5989 ret
+
+
+ 5990 push  reg1
+ 5992 push  reg2
+ 5994 add   reg0  reg0     2
+ 5998 rmem  reg0  reg0
+ 6001 jf    reg0  6019
+ 6004 rmem  reg1  2732
+ 6007 eq    reg1  reg0  reg1
+ 6011 jt    reg1  6019
+ 6014 set   reg0     0
  6017 jmp   6022
- 6019 set  32768     1
- 6022 pop  32770
- 6024 pop  32769
- 6026 ret  
- 6027 jt   32768  6035
- 6030 add  32768 32769     1
- 6034 ret  
- 6035 jt   32769  6048
- 6038 add  32768 32768 32767
- 6042 set  32769 32775
+ 6019 set   reg0     1
+ 6022 pop   reg2
+ 6024 pop   reg1
+ 6026 ret
+
+
+Validate teleportation - reg0 = 4, reg1 = 1; reg0 = 6 -> success
+ 6027 jt    reg0  6035           // if reg0 != 0, jump to 6035
+ 6030 add   reg0  reg1     1
+ 6034 ret
+ 6035 jt    reg1  6048           // if reg1 != 0, jump to 6048
+ 6038 add   reg0  reg0 32767
+ 6042 set   reg1  reg7
  6045 call  6027
- 6047 ret  
- 6048 push 32768
- 6050 add  32769 32769 32767
- 6054 call  6027
- 6056 set  32769 32768
- 6059 pop  32768
- 6061 add  32768 32768 32767
+ 6047 ret
+ 6048 push  reg0                 // save reg0 for later
+ 6050 add   reg1  reg1 32767     // reg1 = (reg1 + 32767) % 32768
+ 6054 call  6027                 // call recursively
+ 6056 set   reg1  reg0
+ 6059 pop   reg0
+ 6061 add   reg0  reg0 32767
  6065 call  6027
- 6067 ret  
+ 6067 ret
+
+
  8175 in   16435
 10453 push 21392
 10573 rmem 21237 10070
@@ -1957,4 +2017,4 @@ There
 21607 gt   11120 21024 31428
 22195 rmem 12193 23244
 26837 push 21442
-30050 halt 
+30050 halt

@@ -13,7 +13,7 @@ class synacor_debugger( object ):
         registers = range( 32768, 32768 + 8 )
         for i, reg in enumerate( registers ):
             val = self.vm.registers[ reg ]
-            print "Register " + str( i + 1 ) + " (" + str( reg ) + "): " + str( val )
+            print "Register " + str( i ) + " (" + str( reg ) + "): " + str( val )
 
     def asm( self, num_lines = 5 ):
         # print current assembly
@@ -37,8 +37,12 @@ class synacor_debugger( object ):
 
     def steptil( self, dest ):
         # run until we hit memory address dest
+        self.step()
         while self.current_loc != dest:
             self.step()
+
+    def loc( self ):
+        print self.vm.memory[ 2732 ]
 
 if __name__ == "__main__":
     db = synacor_debugger()
